@@ -132,8 +132,8 @@ def pagebuild(pagecount)
     instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + $pagetemp)
   end
 end
-#
-#continue common page
+
+#restart common page region
 $pagetemp = "
       </script>
     </head>
@@ -147,62 +147,56 @@ $pagetemp = "
               <span class='icon-bar'></span>
               <span class='icon-bar'></span>
               <span class='icon-bar'></span>
-              </button>
+            </button>
             <a class='navbar-brand' href='index.html' id='head1'>Analytics Dashboard</a>
           </div>
           <div id='navbar' class='navbar-collapse collapse'>
-            <ul class='nav navbar-nav'>\n"
-
+            <ul class='nav navbar-nav'>"
 #continue to build all the pages
 pagebuild(pagecount)
-
+#restart common page region
 $pagetemp = ''
-
+#add page links to header
 (0..pagecount).map do |i|
   $pagetemp += "
-              <li class=''><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>\n"
+              <li class=''><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>"
 end
-
 #continue to build all the pages
 pagebuild(pagecount)
-
+#restart common page region
 $pagetemp = "
             </ul>
           </div>
         </div>
       </nav>
-      <div class='container-fluid'>\n"
-
+      <div class='container-fluid'>"
 #continue to build all the pages
 pagebuild(pagecount)
-
-#add chart divs to page 1
+#add chart divs to each page
 $structure.map.with_index do |chart, index|
   data0 = chart[0].tr('<"=: ','')
   i = (index / 50).ceil
-  instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_#{data0}'></div>\n")
+  instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "\n       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_#{data0}'></div>")
 end
-
-#finish common page region.
+#restart common page region
 $pagetemp = "
       </div>
       <footer class='footer'>
         <div class='container'>
           <ul class='list-unstyled'>
-            <li><a href='#head1'>Back to top</a></li>\n"
+            <li><a href='#head1'>Back to top</a></li>"
 #continue to build all the pages
 pagebuild(pagecount)
-
+#restart common page region
 $pagetemp = ''
-
+#restart common page region and add page links to footer
 (0..pagecount).map do |i|
   $pagetemp += "
-              <li class=''><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>\n"
+            <li class=''><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>"
 end
-
 #continue to build all the pages
 pagebuild(pagecount)
-
+#restart common page region
 $pagetemp = "
           </ul>
         </div>
@@ -213,10 +207,8 @@ $pagetemp = "
       <script src='bootstrap/js/bootstrap.min.js'></script>
     </body>
 </html>"
-
 #finish building all the pages
 pagebuild(pagecount)
-
 #write all the HTML pages to files
 (0..pagecount).map do |i|
   file = File.open("index#{i > 0 ? i : ''}.html", 'w')
