@@ -1,5 +1,4 @@
-$tokens = []
-$structure = []
+$tokens = []; $structure = [];
 #chart size global variables
 $width = 400; $height=330;
 #start common page region
@@ -63,7 +62,7 @@ $pagetemp = <<-EOS
 EOS
 
 #loop over schema files
-Dir.glob("schema/*.xsd").map.with_index do |schema, i|
+Dir.glob("schema/*.xsd").map do |schema|
   filename = schema.split('/').last
   file = File.open(schema, 'r'); data = file.read; file.close;
   data.scan(/<xs:\w+|\w+="\w+"/).uniq do |x|
@@ -80,13 +79,13 @@ end
 
 $tokens.sort.map.with_index do |x, i|
   $structure[i] = [x]
-  Dir.glob("schema/*.xsd").map.with_index do |schema, index|
+  Dir.glob("schema/*.xsd").map do |schema|
     filename = schema.split('/').last
     file = File.open(schema, 'r'); data = file.read; file.close;
     $structure[i] << [filename, data.scan(x).size]
   end
 end
-
+#common function that prints the chart title
 def charttitle(charttype, ind)
   "#{ind + 1} - Branch gh-pages count of: #{charttype} grouped by file"
 end
@@ -110,13 +109,11 @@ def drawChart(whichChart, data, chartstring, chartnumber, charttitle, chartdiv)
             chart.draw(data, options);
           }\n"
 end
-
 #try 50 charts per page
 pagecount =  $structure.size / 50
 (0..pagecount).map do |i|
   instance_variable_set("@page#{i > 0 ? i : ''}", $pagetemp)
 end
-
 #add all the pie charts to each page
 $structure.map.with_index do |chart, ind|
     data0 = chart[0].tr('<"=: ','')
@@ -125,14 +122,12 @@ $structure.map.with_index do |chart, ind|
     i = (ind / 50).ceil
     instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "          google.charts.setOnLoadCallback(drawChart#{data0});\n" + drawChart("#{data0}", data1, "#{chart[0]}", "#{v}", "#{charttitle(chart[0], ind)}", "#{data0}"))
 end
-
 #buld all the website pages
 def pagebuild(pagecount)
   (0..pagecount).map do |i|
     instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + $pagetemp)
   end
 end
-
 #restart common page region
 $pagetemp = "
       </script>
