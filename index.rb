@@ -71,6 +71,11 @@ Dir.glob("schema/*.xsd").map.with_index do |schema, i|
       $tokens << x
     end
   end
+  data.scan(/<xs:\w+ \w+="\w+"/).uniq do |x|
+    if !$tokens.include? x
+      $tokens << x
+    end
+  end
 end
 
 $tokens.sort.map.with_index do |x, i|
@@ -114,7 +119,7 @@ end
 
 #add all the pie charts to each page
 $structure.map.with_index do |chart, ind|
-    data0 = chart[0].tr('<""=:','')
+    data0 = chart[0].tr('<""=: ','')
     data1 = chart[1..-1]
     v = 'Values'
     i = (ind / 50).ceil
@@ -173,7 +178,7 @@ pagebuild(pagecount)
 
 #add chart divs to page 1
 $structure.map.with_index do |chart, index|
-  data0 = chart[0].tr('<""=:','')
+  data0 = chart[0].tr('<""=: ','')
   i = (index / 50).ceil
   instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_#{data0}'></div>\n")
 end
