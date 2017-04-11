@@ -65,7 +65,7 @@ EOS
 Dir.glob("schema/*.xsd").map do |schema|
   filename = schema.split('/').last
   file = File.open(schema, 'r'); data = file.read; file.close;
-  data.scan(/<xs:\w+|\w+="\w+"/).uniq do |x|
+  data.scan(/<xs:\w+|\w+="\w+"|\w+="xs:\w+"/).uniq do |x|
     if !$tokens.include? x
       $tokens << x
     end

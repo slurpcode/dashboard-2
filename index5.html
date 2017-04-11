@@ -756,6 +756,24 @@
             var chart = new google.visualization.PieChart(document.getElementById('chart_div_basestring'));
             chart.draw(data, options);
           }
+          google.charts.setOnLoadCallback(drawChartbasexsstring);
+
+          function drawChartbasexsstring() {
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'base="xs:string"');
+            data.addColumn('number', 'Values');
+            data.addRows([["bar.xsd", 0], ["bookstore.xsd", 1], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
+            // Set chart options
+            var options = {'title': '290 - Branch gh-pages count of: base="xs:string" grouped by file',
+                           is3D: true,
+                           'width': 400,
+                           'height': 330,
+                           'titleTextStyle': { 'color': 'black' } };
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div_basexsstring'));
+            chart.draw(data, options);
+          }
           google.charts.setOnLoadCallback(drawChartblockDefaultsubstitution);
 
           function drawChartblockDefaultsubstitution() {
@@ -765,7 +783,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '290 - Branch gh-pages count of: blockDefault="substitution" grouped by file',
+            var options = {'title': '291 - Branch gh-pages count of: blockDefault="substitution" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -783,7 +801,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 1], ["dinner-menu.xsd", 1], ["foo.xsd", 0], ["note.xsd", 1], ["note2.xsd", 1], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '291 - Branch gh-pages count of: elementFormDefault="qualified" grouped by file',
+            var options = {'title': '292 - Branch gh-pages count of: elementFormDefault="qualified" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -801,7 +819,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '292 - Branch gh-pages count of: elementFormDefault="unqualified" grouped by file',
+            var options = {'title': '293 - Branch gh-pages count of: elementFormDefault="unqualified" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -819,7 +837,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 1], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '293 - Branch gh-pages count of: lang="en" grouped by file',
+            var options = {'title': '294 - Branch gh-pages count of: lang="en" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -837,7 +855,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 2], ["dinner-menu.xsd", 1], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 15], ["saml20protocol_schema.xsd", 11], ["xenc_schema.xsd", 1], ["xmldsig_schema.xsd", 16]]);
             // Set chart options
-            var options = {'title': '294 - Branch gh-pages count of: maxOccurs="unbounded" grouped by file',
+            var options = {'title': '295 - Branch gh-pages count of: maxOccurs="unbounded" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -855,7 +873,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 2], ["dinner-menu.xsd", 1], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 18], ["saml20protocol_schema.xsd", 24], ["xenc_schema.xsd", 5], ["xmldsig_schema.xsd", 18]]);
             // Set chart options
-            var options = {'title': '295 - Branch gh-pages count of: minOccurs="0" grouped by file',
+            var options = {'title': '296 - Branch gh-pages count of: minOccurs="0" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -873,7 +891,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '296 - Branch gh-pages count of: mixed="false" grouped by file',
+            var options = {'title': '297 - Branch gh-pages count of: mixed="false" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -891,7 +909,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 1], ["xmldsig_schema.xsd", 8]]);
             // Set chart options
-            var options = {'title': '297 - Branch gh-pages count of: mixed="true" grouped by file',
+            var options = {'title': '298 - Branch gh-pages count of: mixed="true" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -909,7 +927,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '298 - Branch gh-pages count of: name="Action" grouped by file',
+            var options = {'title': '299 - Branch gh-pages count of: name="Action" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -927,31 +945,13 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '299 - Branch gh-pages count of: name="ActionType" grouped by file',
+            var options = {'title': '300 - Branch gh-pages count of: name="ActionType" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
                            'titleTextStyle': { 'color': 'black' } };
             // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.PieChart(document.getElementById('chart_div_nameActionType'));
-            chart.draw(data, options);
-          }
-          google.charts.setOnLoadCallback(drawChartnameAddress);
-
-          function drawChartnameAddress() {
-            // Create the data table.
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'name="Address"');
-            data.addColumn('number', 'Values');
-            data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 2], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
-            // Set chart options
-            var options = {'title': '300 - Branch gh-pages count of: name="Address" grouped by file',
-                           is3D: true,
-                           'width': 400,
-                           'height': 330,
-                           'titleTextStyle': { 'color': 'black' } };
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div_nameAddress'));
             chart.draw(data, options);
           }
 
@@ -1028,6 +1028,7 @@
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_basebase64Binary'></div>
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_baseinteger'></div>
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_basestring'></div>
+       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_basexsstring'></div>
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_blockDefaultsubstitution'></div>
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_elementFormDefaultqualified'></div>
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_elementFormDefaultunqualified'></div>
@@ -1038,7 +1039,6 @@
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_mixedtrue'></div>
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_nameAction'></div>
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_nameActionType'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_nameAddress'></div>
       </div>
       <footer class='footer'>
         <div class='container'>

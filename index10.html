@@ -54,6 +54,24 @@
         <script type="text/javascript">
           // Load the Visualization API and the corechart package.
           google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChartnameStatusType);
+
+          function drawChartnameStatusType() {
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'name="StatusType"');
+            data.addColumn('number', 'Values');
+            data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
+            // Set chart options
+            var options = {'title': '501 - Branch gh-pages count of: name="StatusType" grouped by file',
+                           is3D: true,
+                           'width': 400,
+                           'height': 330,
+                           'titleTextStyle': { 'color': 'black' } };
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div_nameStatusType'));
+            chart.draw(data, options);
+          }
           google.charts.setOnLoadCallback(drawChartnameSubject);
 
           function drawChartnameSubject() {
@@ -63,7 +81,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '501 - Branch gh-pages count of: name="Subject" grouped by file',
+            var options = {'title': '502 - Branch gh-pages count of: name="Subject" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -81,7 +99,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '502 - Branch gh-pages count of: name="SubjectConfirmation" grouped by file',
+            var options = {'title': '503 - Branch gh-pages count of: name="SubjectConfirmation" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -99,7 +117,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '503 - Branch gh-pages count of: name="SubjectConfirmationData" grouped by file',
+            var options = {'title': '504 - Branch gh-pages count of: name="SubjectConfirmationData" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -117,7 +135,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '504 - Branch gh-pages count of: name="SubjectConfirmationDataType" grouped by file',
+            var options = {'title': '505 - Branch gh-pages count of: name="SubjectConfirmationDataType" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -135,7 +153,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '505 - Branch gh-pages count of: name="SubjectConfirmationType" grouped by file',
+            var options = {'title': '506 - Branch gh-pages count of: name="SubjectConfirmationType" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -153,7 +171,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '506 - Branch gh-pages count of: name="SubjectLocality" grouped by file',
+            var options = {'title': '507 - Branch gh-pages count of: name="SubjectLocality" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -171,7 +189,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '507 - Branch gh-pages count of: name="SubjectLocalityType" grouped by file',
+            var options = {'title': '508 - Branch gh-pages count of: name="SubjectLocalityType" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -189,7 +207,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '508 - Branch gh-pages count of: name="SubjectQuery" grouped by file',
+            var options = {'title': '509 - Branch gh-pages count of: name="SubjectQuery" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -207,7 +225,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '509 - Branch gh-pages count of: name="SubjectQueryAbstractType" grouped by file',
+            var options = {'title': '510 - Branch gh-pages count of: name="SubjectQueryAbstractType" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -225,7 +243,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '510 - Branch gh-pages count of: name="SubjectType" grouped by file',
+            var options = {'title': '511 - Branch gh-pages count of: name="SubjectType" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -243,7 +261,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '511 - Branch gh-pages count of: name="Target" grouped by file',
+            var options = {'title': '512 - Branch gh-pages count of: name="Target" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -261,7 +279,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '512 - Branch gh-pages count of: name="Terminate" grouped by file',
+            var options = {'title': '513 - Branch gh-pages count of: name="Terminate" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -279,7 +297,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '513 - Branch gh-pages count of: name="TerminateType" grouped by file',
+            var options = {'title': '514 - Branch gh-pages count of: name="TerminateType" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -297,7 +315,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '514 - Branch gh-pages count of: name="Transform" grouped by file',
+            var options = {'title': '515 - Branch gh-pages count of: name="Transform" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -315,7 +333,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '515 - Branch gh-pages count of: name="TransformType" grouped by file',
+            var options = {'title': '516 - Branch gh-pages count of: name="TransformType" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -333,7 +351,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '516 - Branch gh-pages count of: name="Transforms" grouped by file',
+            var options = {'title': '517 - Branch gh-pages count of: name="Transforms" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -351,7 +369,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '517 - Branch gh-pages count of: name="TransformsType" grouped by file',
+            var options = {'title': '518 - Branch gh-pages count of: name="TransformsType" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -369,7 +387,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 2]]);
             // Set chart options
-            var options = {'title': '518 - Branch gh-pages count of: name="Type" grouped by file',
+            var options = {'title': '519 - Branch gh-pages count of: name="Type" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -387,7 +405,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 2]]);
             // Set chart options
-            var options = {'title': '519 - Branch gh-pages count of: name="URI" grouped by file',
+            var options = {'title': '520 - Branch gh-pages count of: name="URI" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -405,7 +423,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '520 - Branch gh-pages count of: name="Value" grouped by file',
+            var options = {'title': '521 - Branch gh-pages count of: name="Value" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -423,7 +441,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 2], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '521 - Branch gh-pages count of: name="Version" grouped by file',
+            var options = {'title': '522 - Branch gh-pages count of: name="Version" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -441,7 +459,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '522 - Branch gh-pages count of: name="X509CRL" grouped by file',
+            var options = {'title': '523 - Branch gh-pages count of: name="X509CRL" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -459,7 +477,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '523 - Branch gh-pages count of: name="X509Certificate" grouped by file',
+            var options = {'title': '524 - Branch gh-pages count of: name="X509Certificate" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -477,7 +495,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '524 - Branch gh-pages count of: name="X509Data" grouped by file',
+            var options = {'title': '525 - Branch gh-pages count of: name="X509Data" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -495,7 +513,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '525 - Branch gh-pages count of: name="X509DataType" grouped by file',
+            var options = {'title': '526 - Branch gh-pages count of: name="X509DataType" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -513,7 +531,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '526 - Branch gh-pages count of: name="X509IssuerName" grouped by file',
+            var options = {'title': '527 - Branch gh-pages count of: name="X509IssuerName" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -531,7 +549,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '527 - Branch gh-pages count of: name="X509IssuerSerial" grouped by file',
+            var options = {'title': '528 - Branch gh-pages count of: name="X509IssuerSerial" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -549,7 +567,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '528 - Branch gh-pages count of: name="X509IssuerSerialType" grouped by file',
+            var options = {'title': '529 - Branch gh-pages count of: name="X509IssuerSerialType" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -567,7 +585,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '529 - Branch gh-pages count of: name="X509SKI" grouped by file',
+            var options = {'title': '530 - Branch gh-pages count of: name="X509SKI" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -585,7 +603,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '530 - Branch gh-pages count of: name="X509SerialNumber" grouped by file',
+            var options = {'title': '531 - Branch gh-pages count of: name="X509SerialNumber" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -603,7 +621,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '531 - Branch gh-pages count of: name="X509SubjectName" grouped by file',
+            var options = {'title': '532 - Branch gh-pages count of: name="X509SubjectName" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -621,7 +639,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '532 - Branch gh-pages count of: name="XPath" grouped by file',
+            var options = {'title': '533 - Branch gh-pages count of: name="XPath" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -639,7 +657,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
             // Set chart options
-            var options = {'title': '533 - Branch gh-pages count of: name="Y" grouped by file',
+            var options = {'title': '534 - Branch gh-pages count of: name="Y" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -657,7 +675,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 1], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '534 - Branch gh-pages count of: name="author" grouped by file',
+            var options = {'title': '535 - Branch gh-pages count of: name="author" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -675,7 +693,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 1], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '535 - Branch gh-pages count of: name="bar" grouped by file',
+            var options = {'title': '536 - Branch gh-pages count of: name="bar" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -693,7 +711,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 1], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '536 - Branch gh-pages count of: name="body" grouped by file',
+            var options = {'title': '537 - Branch gh-pages count of: name="body" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -711,7 +729,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 1], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '537 - Branch gh-pages count of: name="book" grouped by file',
+            var options = {'title': '538 - Branch gh-pages count of: name="book" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -729,7 +747,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 1], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '538 - Branch gh-pages count of: name="bookstore" grouped by file',
+            var options = {'title': '539 - Branch gh-pages count of: name="bookstore" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -747,7 +765,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 1], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '539 - Branch gh-pages count of: name="calories" grouped by file',
+            var options = {'title': '540 - Branch gh-pages count of: name="calories" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -765,7 +783,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 1], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '540 - Branch gh-pages count of: name="category" grouped by file',
+            var options = {'title': '541 - Branch gh-pages count of: name="category" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -783,7 +801,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 1], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '541 - Branch gh-pages count of: name="cover" grouped by file',
+            var options = {'title': '542 - Branch gh-pages count of: name="cover" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -801,7 +819,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 1], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '542 - Branch gh-pages count of: name="date" grouped by file',
+            var options = {'title': '543 - Branch gh-pages count of: name="date" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -819,7 +837,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 1], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '543 - Branch gh-pages count of: name="day" grouped by file',
+            var options = {'title': '544 - Branch gh-pages count of: name="day" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -837,7 +855,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 1], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '544 - Branch gh-pages count of: name="description" grouped by file',
+            var options = {'title': '545 - Branch gh-pages count of: name="description" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -855,7 +873,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 1], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '545 - Branch gh-pages count of: name="dinner_menu" grouped by file',
+            var options = {'title': '546 - Branch gh-pages count of: name="dinner_menu" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -873,7 +891,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 1], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '546 - Branch gh-pages count of: name="food" grouped by file',
+            var options = {'title': '547 - Branch gh-pages count of: name="food" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -891,7 +909,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 1], ["note2.xsd", 1], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '547 - Branch gh-pages count of: name="from" grouped by file',
+            var options = {'title': '548 - Branch gh-pages count of: name="from" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -909,7 +927,7 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 1], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '548 - Branch gh-pages count of: name="heading" grouped by file',
+            var options = {'title': '549 - Branch gh-pages count of: name="heading" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
@@ -927,31 +945,13 @@
             data.addColumn('number', 'Values');
             data.addRows([["bar.xsd", 0], ["bookstore.xsd", 1], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
             // Set chart options
-            var options = {'title': '549 - Branch gh-pages count of: name="lang" grouped by file',
+            var options = {'title': '550 - Branch gh-pages count of: name="lang" grouped by file',
                            is3D: true,
                            'width': 400,
                            'height': 330,
                            'titleTextStyle': { 'color': 'black' } };
             // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.PieChart(document.getElementById('chart_div_namelang'));
-            chart.draw(data, options);
-          }
-          google.charts.setOnLoadCallback(drawChartnamemonth);
-
-          function drawChartnamemonth() {
-            // Create the data table.
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'name="month"');
-            data.addColumn('number', 'Values');
-            data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 1], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
-            // Set chart options
-            var options = {'title': '550 - Branch gh-pages count of: name="month" grouped by file',
-                           is3D: true,
-                           'width': 400,
-                           'height': 330,
-                           'titleTextStyle': { 'color': 'black' } };
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div_namemonth'));
             chart.draw(data, options);
           }
 
@@ -989,6 +989,7 @@
         </div>
       </nav>
       <div class='container-fluid'>
+       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_nameStatusType'></div>
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_nameSubject'></div>
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_nameSubjectConfirmation'></div>
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_nameSubjectConfirmationData'></div>
@@ -1038,7 +1039,6 @@
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_namefrom'></div>
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_nameheading'></div>
        <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_namelang'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_namemonth'></div>
       </div>
       <footer class='footer'>
         <div class='container'>
