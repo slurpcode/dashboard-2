@@ -34,8 +34,8 @@ $pagetemp = <<-EOS
           .dropdown-menu > li > a { display: block; padding: 3px 20px; clear: both;
             font-weight: 600; line-height: 1.42857143; color: #333; white-space: nowrap; }
           div[id^="chart_div"] > div > div { margin: auto; }
-          .footer { background-color: rgba(49,37,152,0.8); min-height: 200px; color: #fff !important; }
-          .footer ul a { color: #fff !important; }
+          footer { background-color: rgba(49,37,152,0.8); min-height: 200px; color: #fff !important; }
+          footer ul a { color: #fff !important; }
         </style>
         <!--Load the AJAX API-->
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -160,7 +160,7 @@ end
 #restart common page region
 $pagetemp = "
       </div>
-      <footer class='footer'>
+      <footer>
         <div class='container'>
           <ul class='list-unstyled'>
             <li><a href='#head1'>Back to top</a></li>"
