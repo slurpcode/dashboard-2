@@ -33,6 +33,7 @@ $pagetemp = <<-EOS
           footer ul a { color: #fff !important; }
           .selected { background-color: aliceblue; }
           .navbar-default li:hover a { background-color: red !important; }
+          .nuchecker a { font-weight: bold; }
         </style>
         <!--Load the AJAX API-->
         <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
@@ -173,6 +174,7 @@ end
 pagebuild(pagecount)
 #restart common page region
 $pagetemp = "
+            <li class='nuchecker'><a target='_blank'>Valid HTML</a>
           </ul>
         </div>
       </footer>
@@ -186,6 +188,9 @@ $pagetemp = "
           var tab = 1
           if(last != '') tab = parseInt(last) + 1
           $('.navbar-nav li:nth-child('+tab+')').addClass('selected')
+          tab--
+          if(tab === 0) tab = ''
+          $('.nuchecker a').attr('href', 'https://validator.w3.org/nu/?doc=http%3A%2F%2Fthebeast.me%2Fdashboard-2%2Findex'+tab+'.html')
         });
       </script>
     </body>
