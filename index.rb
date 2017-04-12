@@ -17,7 +17,7 @@ $pagetemp = <<-EOS
         <style>
           h2 { text-align: center; font-size: 19pt; background-color: rgba(49,37,152,0.8); color: #fff; border-radius: 1pt 1pt 1pt 1pt; padding: 14px; }
           .container-fluid { padding: 0px; }
-          .navbar, .navbar-default { padding: 5pt; background-color: rgba(49,37,152,0.8) !important; color: #fff !important; font-size: 12pt; border-color: #none !important; }          
+          .navbar, .navbar-default { padding: 5pt; background-color: rgba(49,37,152,0.8) !important; color: #fff !important; font-size: 12pt; border-color: #none !important; }
           .navbar, .navbar-default li a { color: #000000 !important; }
           .navbar-default .navbar-brand { color: #fff; font-size: 15pt; }
           .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover,
@@ -134,7 +134,7 @@ $pagetemp = ''
 #add page links to header
 (0..pagecount).map do |i|
   $pagetemp += "
-              <li class=''><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>"
+              <li><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>"
 end
 #continue to build all the pages
 pagebuild(pagecount)
@@ -167,7 +167,7 @@ $pagetemp = ''
 #add page links to footer
 (0..pagecount).map do |i|
   $pagetemp += "
-            <li class=''><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>"
+            <li><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>"
 end
 #continue to build all the pages
 pagebuild(pagecount)
