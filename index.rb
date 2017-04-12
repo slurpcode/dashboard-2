@@ -17,41 +17,25 @@ $pagetemp = <<-EOS
         <!-- Optional theme -->
         <link rel='stylesheet' href='bootstrap/css/bootstrap-theme.min.css'>
         <style>
-          h2 { text-align: center; font-size: 19pt; background-color: rgba(49,37,152,0.8);
-               color: #fff; border-radius: 1pt 1pt 1pt 1pt; padding: 14px; }
+          h2 { text-align: center; font-size: 19pt; background-color: rgba(49,37,152,0.8); color: #fff; border-radius: 1pt 1pt 1pt 1pt; padding: 14px; }
           .container-fluid { padding: 0px; }
           .navbar, .navbar-default { padding: 5pt; background-color: rgba(49,37,152,0.8) !important;
              color: #fff !important; font-size: 12pt; border-color: #none !important; }
           .navbar, .navbar-default li hover { color: #fff !important; }
           .navbar, .navbar-default li a { color: #000000 !important; }
           .navbar-default .navbar-brand { color: #fff; font-size: 15pt; }
-          .navbar-default .navbar-nav > .active > a,
-          .navbar-default .navbar-nav > .active > a:hover,
-          .navbar-default .navbar-nav > .active > a:focus {
-            background-color: transparent !important; }
-          .navbar-default .navbar-nav > .open > a,
-          .navbar-default .navbar-nav > .open > a:focus,
-          .navbar-default .navbar-nav > .open > a:hover {
-          	color: #555; background-color: #ff0000; font-weight: bold; }
-          .navbar-default .navbar-brand:hover,
-          .navbar-default .navbar-brand:focus {
-            color: #fff; background-color: transparent; }
+          .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover,
+          .navbar-default .navbar-nav > .active > a:focus { background-color: transparent !important; }
+          .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus,
+          .navbar-default .navbar-nav > .open > a:hover { color: #555; background-color: #ff0000; font-weight: bold; }
+          .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus { color: #fff; background-color: transparent; }
           .navbar-default .navbar-text { color: #000; }
           .nav { padding-right: 300px; }
           .dropdown-menu > li > a { display: block; padding: 3px 20px; clear: both;
             font-weight: 600; line-height: 1.42857143; color: #333; white-space: nowrap; }
           div[id^="chart_div"] > div > div { margin: auto; }
-          .chartNumber { color: purple; font-size: 22pt; }
-          .overview { font-size: 14pt;  }
-         .footer { background-color: rgba(49,37,152,0.8);
-           min-height: 200px; color: #fff !important; }
-         .footer ul a { color: #fff !important; }
-         pre { white-space: pre-wrap; //css3
-             white-space: moz-pre-wrap; //firefox
-             white-space: -pre-wrap; //opera 4-6
-             white-space: -o-pre-wrap; //opera 7
-             word-wrap: break-word; //internet explorer
-         }
+          .footer { background-color: rgba(49,37,152,0.8); min-height: 200px; color: #fff !important; }
+          .footer ul a { color: #fff !important; }
         </style>
         <!--Load the AJAX API-->
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
