@@ -3,11 +3,11 @@ $width = 400; $height = 330; #chart size global variables
 #start common page region
 $pagetemp = <<-EOS
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Analytics Dashboard</title>
         <!-- Latest compiled and minified CSS -->
@@ -33,11 +33,12 @@ $pagetemp = <<-EOS
           div[id^="chart_div"] > div > div { margin: auto; }
           footer { background-color: rgba(49,37,152,0.8); min-height: 200px; color: #fff !important; }
           footer ul a { color: #fff !important; }
+          .selected { background-color: aliceblue; }
         </style>
         <!--Load the AJAX API-->
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <script type="text/javascript">
+        <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+        <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+        <script type='text/javascript'>
           // Load the Visualization API and the corechart package.
           google.charts.load('current', {'packages':['corechart']});
 EOS
@@ -180,6 +181,14 @@ $pagetemp = "
       <script src='bootstrap/js/jquery.min.js'></script>
       <!-- Latest compiled and minified JavaScript -->
       <script src='bootstrap/js/bootstrap.min.js'></script>
+      <script>
+        $(document).ready(function(){
+          var last = $(location).attr('href').split('/').slice(-1)[0].split('.')[0].replace(/index/,'')        
+          var tab = 1
+          if(last != '') tab = parseInt(last) + 1
+          $('.navbar-nav li:nth-child('+tab+')').addClass('selected')
+        });
+      </script>
     </body>
 </html>"
 #finish building all the pages
