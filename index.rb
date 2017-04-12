@@ -1,6 +1,5 @@
-$tokens = []; $structure = [];
-#chart size global variables
-$width = 400; $height=330;
+$tokens = []; $structure = []; #data variables
+$width = 400; $height = 330; #chart size global variables
 #start common page region
 $pagetemp = <<-EOS
 <!DOCTYPE html>
@@ -9,8 +8,7 @@ $pagetemp = <<-EOS
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other
-             head content must come *after* these tags -->
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Analytics Dashboard</title>
         <!-- Latest compiled and minified CSS -->
         <link rel='stylesheet' href='bootstrap/css/bootstrap.min.css'>
@@ -31,8 +29,7 @@ $pagetemp = <<-EOS
           .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus { color: #fff; background-color: transparent; }
           .navbar-default .navbar-text { color: #000; }
           .nav { padding-right: 300px; }
-          .dropdown-menu > li > a { display: block; padding: 3px 20px; clear: both;
-            font-weight: 600; line-height: 1.42857143; color: #333; white-space: nowrap; }
+          .dropdown-menu > li > a { display: block; padding: 3px 20px; clear: both; font-weight: 600; line-height: 1.42857143; color: #333; white-space: nowrap; }
           div[id^="chart_div"] > div > div { margin: auto; }
           footer { background-color: rgba(49,37,152,0.8); min-height: 200px; color: #fff !important; }
           footer ul a { color: #fff !important; }
@@ -44,7 +41,6 @@ $pagetemp = <<-EOS
           // Load the Visualization API and the corechart package.
           google.charts.load('current', {'packages':['corechart']});
 EOS
-
 #loop over schema files
 Dir.glob("schema/*.xsd").map do |schema|
   filename = schema.split('/').last
@@ -60,7 +56,7 @@ Dir.glob("schema/*.xsd").map do |schema|
     end
   end
 end
-
+#create main data array
 $tokens.sort.map.with_index do |x, i|
   $structure[i] = [x]
   Dir.glob("schema/*.xsd").map do |schema|
@@ -168,7 +164,7 @@ $pagetemp = "
 pagebuild(pagecount)
 #restart common page region
 $pagetemp = ''
-#restart common page region and add page links to footer
+#add page links to footer
 (0..pagecount).map do |i|
   $pagetemp += "
             <li class=''><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>"
