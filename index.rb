@@ -1,17 +1,13 @@
 $tokens = []; $structure = []; # data variables
-$width = 400; $height = 330; # chart size global variables
+width = 400; height = 330; # chart size variables
 # loop over schema files
 Dir.glob('schema/*.xsd').map do |schema|
   file = File.open(schema, 'r'); data = file.read; file.close;
   data.scan(/<xs:\w+|\w+="\w+"|\w+="xs:\w+"/).uniq do |x|
-    if !$tokens.include? x
-      $tokens << x
-    end
+    $tokens << x unless $tokens.include? x
   end
   data.scan(/<xs:\w+ \w+="\w+"/).uniq do |x|
-    if !$tokens.include? x
-      $tokens << x
-    end
+    $tokens << x unless $tokens.include? x
   end
 end
 # create main data array
@@ -28,7 +24,7 @@ def charttitle(charttype, ind)
   "#{ind + 1} - Branch gh-pages count of: #{charttype} grouped by file"
 end
 # common function for each chart
-def drawChart(whichChart, data, chartstring, chartnumber, charttitle, chartdiv)
+def drawChart(whichChart, data, chartstring, chartnumber, charttitle, chartdiv, width, height)
       "
         function drawChart#{whichChart}() {
           // Create the data table.
@@ -39,8 +35,8 @@ def drawChart(whichChart, data, chartstring, chartnumber, charttitle, chartdiv)
           // Set chart options
           var options = {'title': '#{charttitle}',
                          is3D: true,
-                         'width': #{$width},
-                         'height': #{$height},
+                         'width': #{width},
+                         'height': #{height},
                          'titleTextStyle': { 'color': 'black' } };
           // Instantiate and draw our chart, passing in some options.
           var chart = new google.visualization.PieChart(document.getElementById('chart_div_#{chartdiv}'));
@@ -163,7 +159,7 @@ $structure.map.with_index do |chart, ind|
   data1 = chart[1..-1]
   v = 'Values'
   i = (ind / 50).ceil
-  instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "        google.charts.setOnLoadCallback(drawChart#{data0});\n" + drawChart("#{data0}", data1, "#{chart[0]}", "#{v}", "#{charttitle(chart[0], ind)}", "#{data0}"))
+  instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "        google.charts.setOnLoadCallback(drawChart#{data0});\n" + drawChart("#{data0}", data1, "#{chart[0]}", "#{v}", "#{charttitle(chart[0], ind)}", "#{data0}", width, height))
 end
 # restart common page region
 $page = "
