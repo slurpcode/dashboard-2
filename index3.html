@@ -131,9 +131,13 @@
     <!--Load the AJAX API-->
     <script src='https://www.gstatic.com/charts/loader.js'></script>
     <script src='https://www.google.com/jsapi'></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src='bootstrap/js/jquery.min.js'></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src='bootstrap/js/bootstrap.min.js'></script>
     <script>
       // Load the Visualization API and the corechart package.
-      google.charts.load('current', {'packages':['corechart']})
+      google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChartxselementnameAuthnContext);
 
         function drawChartxselementnameAuthnContext() {
@@ -1035,12 +1039,6 @@
           chart.draw(data, options);
         }
 
-    </script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src='bootstrap/js/jquery.min.js'></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src='bootstrap/js/bootstrap.min.js'></script>
-    <script>
       $(document).ready(function () {
          'use strict';
          var last = $(location).attr('href').split('/').slice(-1)[0].split('.')[0].replace(/index/, '');

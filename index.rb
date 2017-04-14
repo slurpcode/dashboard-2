@@ -161,9 +161,13 @@ $page = "
     <!--Load the AJAX API-->
     <script src='https://www.gstatic.com/charts/loader.js'></script>
     <script src='https://www.google.com/jsapi'></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src='bootstrap/js/jquery.min.js'></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src='bootstrap/js/bootstrap.min.js'></script>
     <script>
       // Load the Visualization API and the corechart package.
-      google.charts.load('current', {'packages':['corechart']})\n"
+      google.charts.load('current', {'packages':['corechart']});\n"
 # continue to build all the pages
 page_build(pagecount)
 # add all the javascript for each pie chart to each page
@@ -176,12 +180,6 @@ structure.map.with_index do |chart, ind|
 end
 # restart common page region
 $page = "
-    </script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src='bootstrap/js/jquery.min.js'></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src='bootstrap/js/bootstrap.min.js'></script>
-    <script>
       $(document).ready(function () {
          'use strict';
          var last = $(location).attr('href').split('/').slice(-1)[0].split('.')[0].replace(/index/, '');
