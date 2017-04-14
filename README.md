@@ -12,7 +12,7 @@ Ruby instance variables are being used for each HTML page via the [instance_vari
 ## Copyright
 
 - index.rb has an MIT LICENSE Copyright (c) 2017 John Bampton.
-- the schema folder contains 4 XML Schema from the Ruby programming language which uses the GNU GENERAL PUBLIC LICENSE Version 2, June 1991.
+- the schema folder contains 4 XML Schema from the Ruby programming language which  is Copyright (C) 1993-2013 Yukihiro Matsumoto
 
 ## Contributions
 
