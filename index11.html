@@ -836,12 +836,12 @@
          'use strict';
          var last = $(location).attr('href').split('/').slice(-1)[0].split('.')[0].replace(/index/, '');
          var tab = 1;
-         if(last !== '') {
+         if (last !== '') {
            tab = parseInt(last) + 1;
          }
          $('.navbar-nav li:nth-child(' + tab + ')').addClass('selected');
          tab--;
-         if(tab === 0) {
+         if (tab === 0) {
            tab = '';
          }
          $('.nuchecker a').attr('href', 'https://validator.w3.org/nu/?doc=http%3A%2F%2Fthebeast.me%2Fdashboard-2%2Findex' + tab + '.html');
