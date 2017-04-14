@@ -129,7 +129,7 @@ $page = "
 pagebuild(pagecount)
 # add chart divs to each page
 $structure.map.with_index do |chart, index|
-  data0 = chart[0].tr('<"=: ','')
+  data0 = chart[0].tr('<"=: ', '')
   i = (index / 50).ceil
   instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "\n       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_#{data0}'></div>")
 end
@@ -158,9 +158,9 @@ $page = "
       </div>
     </footer>
     <!--Load the AJAX API-->
-    <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
-    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
-    <script type='text/javascript'>
+    <script src='https://www.gstatic.com/charts/loader.js'></script>
+    <script src='https://www.google.com/jsapi'></script>
+    <script>
       // Load the Visualization API and the corechart package.
       google.charts.load('current', {'packages':['corechart']})\n"
 # continue to build all the pages
@@ -182,7 +182,7 @@ $page = "
     <script src='bootstrap/js/bootstrap.min.js'></script>
     <script>
       $(document).ready(function(){
-        var last = $(location).attr('href').split('/').slice(-1)[0].split('.')[0].replace(/index/,'')
+        var last = $(location).attr('href').split('/').slice(-1)[0].split('.')[0].replace(/index/, '')
         var tab = 1
         if(last != '') tab = parseInt(last) + 1
         $('.navbar-nav li:nth-child('+tab+')').addClass('selected')
