@@ -58,7 +58,8 @@ def page_build(pagecount)
   end
 end
 # add navigation hyperlinks
-def add_links(pagecount, page)
+def add_links(pagecount)
+  page = ''
   (0..pagecount).map do |i|
     page += "
             <li><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>"
@@ -119,7 +120,7 @@ pagecount = structure.size / 50
   instance_variable_set("@page#{i > 0 ? i : ''}", $page)
 end
 # restart common page region
-$page = add_links(pagecount, '')
+$page = add_links(pagecount)
 # continue to build all the pages
 page_build(pagecount)
 # restart common page region
@@ -147,7 +148,7 @@ $page = "
 # continue to build all the pages
 page_build(pagecount)
 #restart common page region
-$page = add_links(pagecount, '')
+$page = add_links(pagecount)
 # continue to build all the pages
 page_build(pagecount)
 # restart common page region
