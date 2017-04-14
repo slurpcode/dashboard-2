@@ -69,8 +69,8 @@ $page = <<-EOS
     <link rel='stylesheet' href='bootstrap/css/bootstrap-theme.min.css'>
     <style>
       .container-fluid { padding: 0px; }
-      .navbar, .navbar-default { padding: 5pt; background-color: rgba(49,37,152,0.8) !important; color: #fff !important; font-size: 12pt; border-color: #none !important; }
-      .navbar, .navbar-default li a { color: #000000 !important; }
+      .navbar, .navbar-default { padding: 5pt; background-color: rgba(49,37,152,0.8) !important; font-size: 12pt; }
+      .navbar, .navbar-default li a { color: #000 !important; }
       .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover { color: #fff; font-size: 15pt; }
       div[id^="chart_div"] > div > div { margin: auto; }
       footer { background-color: rgba(49,37,152,0.8); min-height: 200px; color: #fff !important; }
