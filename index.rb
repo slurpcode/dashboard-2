@@ -28,11 +28,11 @@ def generate_data
   structure
 end
 # common function that prints the chart title
-def charttitle(charttype, ind)
+def chart_title(charttype, ind)
   "#{ind + 1} - Branch gh-pages count of: #{charttype} grouped by file"
 end
 # common function for each chart
-def drawChart(whichChart, data, chartstring, chartnumber, charttitle, chartdiv, width, height)
+def draw_chart(whichChart, data, chartstring, chartnumber, charttitle, chartdiv, width, height)
       "
         function drawChart#{whichChart}() {
           // Create the data table.
@@ -52,7 +52,7 @@ def drawChart(whichChart, data, chartstring, chartnumber, charttitle, chartdiv, 
         }\n"
 end
 # buld all the website pages
-def pagebuild(pagecount)
+def page_build(pagecount)
   (0..pagecount).map do |i|
     instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + $page)
   end
@@ -117,7 +117,7 @@ $page = ''
   $page += "            <li><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>\n"
 end
 # continue to build all the pages
-pagebuild(pagecount)
+page_build(pagecount)
 # restart common page region
 $page = "
           </ul>
@@ -126,7 +126,7 @@ $page = "
     </nav>
     <div class='container-fluid'>"
 # continue to build all the pages
-pagebuild(pagecount)
+page_build(pagecount)
 # add chart divs to each page
 structure.map.with_index do |chart, index|
   data0 = chart[0].tr('<"=: ', '')
@@ -141,7 +141,7 @@ $page = "
         <ul class='list-unstyled'>
           <li><a href='#head1'>Back to top</a></li>"
 # continue to build all the pages
-pagebuild(pagecount)
+page_build(pagecount)
 #restart common page region
 $page = ''
 # add page links to footer
@@ -150,7 +150,7 @@ $page = ''
           <li><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>"
 end
 # continue to build all the pages
-pagebuild(pagecount)
+page_build(pagecount)
 # restart common page region
 $page = "
           <li class='nuchecker'><a target='_blank'>Valid HTML</a>
@@ -165,14 +165,14 @@ $page = "
       // Load the Visualization API and the corechart package.
       google.charts.load('current', {'packages':['corechart']})\n"
 # continue to build all the pages
-pagebuild(pagecount)
+page_build(pagecount)
 # add all the javascript for each pie chart to each page
 structure.map.with_index do |chart, ind|
   data0 = chart[0].tr('<"=: ', '')
   data1 = chart[1..-1]
   v = 'Values'
   i = (ind / 50).ceil
-  instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "        google.charts.setOnLoadCallback(drawChart#{data0});\n" + drawChart("#{data0}", data1, "#{chart[0]}", "#{v}", "#{charttitle(chart[0], ind)}", "#{data0}", width, height))
+  instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "        google.charts.setOnLoadCallback(drawChart#{data0});\n" + draw_chart("#{data0}", data1, "#{chart[0]}", "#{v}", "#{chart_title(chart[0], ind)}", "#{data0}", width, height))
 end
 # restart common page region
 $page = "
@@ -195,7 +195,7 @@ $page = "
   </body>
 </html>"
 # finish building all the pages
-pagebuild(pagecount)
+page_build(pagecount)
 # write all the HTML pages to files
 (0..pagecount).map do |i|
   file = File.open("index#{i > 0 ? i : ''}.html", 'w')
