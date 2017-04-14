@@ -1,23 +1,31 @@
-$tokens = []; $structure = []; # data variables
-width = 400; height = 330; # chart size variables
-# loop over schema files
-Dir.glob('schema/*.xsd').map do |schema|
-  file = File.open(schema, 'r'); data = file.read; file.close;
-  data.scan(/<xs:\w+|\w+="\w+"|\w+="xs:\w+"/).uniq do |x|
-    $tokens << x unless $tokens.include? x
-  end
-  data.scan(/<xs:\w+ \w+="\w+"/).uniq do |x|
-    $tokens << x unless $tokens.include? x
-  end
-end
-# create main data array
-$tokens.sort.map.with_index do |x, i|
-  $structure[i] = [x]
+# function that generates the pie chart data
+def generate_data
+  tokens = []
+  # loop over schema files
   Dir.glob('schema/*.xsd').map do |schema|
-    filename = schema.split('/').last
-    file = File.open(schema, 'r'); data = file.read; file.close;
-    $structure[i] << [filename, data.scan(x).size]
+    file = File.open(schema, 'r')
+    data = file.read
+    file.close
+    data.scan(/<xs:\w+|\w+="\w+"|\w+="xs:\w+"/).uniq do |x|
+      tokens << x unless tokens.include? x
+    end
+    data.scan(/<xs:\w+ \w+="\w+"/).uniq do |x|
+      tokens << x unless tokens.include? x
+    end
   end
+  # create main data array
+  structure = []
+  tokens.sort.map.with_index do |x, i|
+    structure[i] = [x]
+    Dir.glob('schema/*.xsd').map do |schema|
+      filename = schema.split('/').last
+      file = File.open(schema, 'r')
+      data = file.read
+      file.close
+      structure[i] << [filename, data.scan(x).size]
+    end
+  end
+  structure
 end
 # common function that prints the chart title
 def charttitle(charttype, ind)
@@ -49,6 +57,11 @@ def pagebuild(pagecount)
     instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + $page)
   end
 end
+# chart size variables
+width = 400
+height = 330
+# data variable
+structure = generate_data
 # start common page region
 $page = <<-EOS
 <!DOCTYPE html>
@@ -93,7 +106,7 @@ $page = <<-EOS
           <ul class='nav navbar-nav'>
 EOS
 # try 50 charts per page
-pagecount = $structure.size / 50
+pagecount = structure.size / 50
 (0..pagecount).map do |i|
   instance_variable_set("@page#{i > 0 ? i : ''}", $page)
 end
@@ -115,7 +128,7 @@ $page = "
 # continue to build all the pages
 pagebuild(pagecount)
 # add chart divs to each page
-$structure.map.with_index do |chart, index|
+structure.map.with_index do |chart, index|
   data0 = chart[0].tr('<"=: ', '')
   i = (index / 50).ceil
   instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "\n       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_#{data0}'></div>")
@@ -154,7 +167,7 @@ $page = "
 # continue to build all the pages
 pagebuild(pagecount)
 # add all the javascript for each pie chart to each page
-$structure.map.with_index do |chart, ind|
+structure.map.with_index do |chart, ind|
   data0 = chart[0].tr('<"=: ', '')
   data1 = chart[1..-1]
   v = 'Values'
