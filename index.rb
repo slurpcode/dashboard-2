@@ -1,8 +1,7 @@
-$tokens = []; $structure = []; #data variables
-$width = 400; $height = 330; #chart size global variables
-#loop over schema files
-Dir.glob("schema/*.xsd").map do |schema|
-  filename = schema.split('/').last
+$tokens = []; $structure = []; # data variables
+$width = 400; $height = 330; # chart size global variables
+# loop over schema files
+Dir.glob('schema/*.xsd').map do |schema|
   file = File.open(schema, 'r'); data = file.read; file.close;
   data.scan(/<xs:\w+|\w+="\w+"|\w+="xs:\w+"/).uniq do |x|
     if !$tokens.include? x
@@ -15,20 +14,20 @@ Dir.glob("schema/*.xsd").map do |schema|
     end
   end
 end
-#create main data array
+# create main data array
 $tokens.sort.map.with_index do |x, i|
   $structure[i] = [x]
-  Dir.glob("schema/*.xsd").map do |schema|
+  Dir.glob('schema/*.xsd').map do |schema|
     filename = schema.split('/').last
     file = File.open(schema, 'r'); data = file.read; file.close;
     $structure[i] << [filename, data.scan(x).size]
   end
 end
-#common function that prints the chart title
+# common function that prints the chart title
 def charttitle(charttype, ind)
   "#{ind + 1} - Branch gh-pages count of: #{charttype} grouped by file"
 end
-#common function for each chart
+# common function for each chart
 def drawChart(whichChart, data, chartstring, chartnumber, charttitle, chartdiv)
       "
         function drawChart#{whichChart}() {
@@ -48,13 +47,13 @@ def drawChart(whichChart, data, chartstring, chartnumber, charttitle, chartdiv)
           chart.draw(data, options);
         }\n"
 end
-#buld all the website pages
+# buld all the website pages
 def pagebuild(pagecount)
   (0..pagecount).map do |i|
     instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + $page)
   end
 end
-#start common page region
+# start common page region
 $page = <<-EOS
 <!DOCTYPE html>
 <html lang='en'>
@@ -106,53 +105,53 @@ $page = <<-EOS
         <div id='navbar' class='navbar-collapse collapse'>
           <ul class='nav navbar-nav'>
 EOS
-#try 50 charts per page
-pagecount =  $structure.size / 50
+# try 50 charts per page
+pagecount = $structure.size / 50
 (0..pagecount).map do |i|
   instance_variable_set("@page#{i > 0 ? i : ''}", $page)
 end
-#restart common page region
+# restart common page region
 $page = ''
-#add page links to header
+# add page links to header
 (0..pagecount).map do |i|
   $page += "            <li><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>\n"
 end
-#continue to build all the pages
+# continue to build all the pages
 pagebuild(pagecount)
-#restart common page region
+# restart common page region
 $page = "
           </ul>
         </div>
       </div>
     </nav>
     <div class='container-fluid'>"
-#continue to build all the pages
+# continue to build all the pages
 pagebuild(pagecount)
-#add chart divs to each page
+# add chart divs to each page
 $structure.map.with_index do |chart, index|
   data0 = chart[0].tr('<"=: ','')
   i = (index / 50).ceil
   instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "\n       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_#{data0}'></div>")
 end
-#restart common page region
+# restart common page region
 $page = "
     </div>
     <footer>
       <div class='container'>
         <ul class='list-unstyled'>
           <li><a href='#head1'>Back to top</a></li>"
-#continue to build all the pages
+# continue to build all the pages
 pagebuild(pagecount)
 #restart common page region
 $page = ''
-#add page links to footer
+# add page links to footer
 (0..pagecount).map do |i|
   $page += "
           <li><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>"
 end
-#continue to build all the pages
+# continue to build all the pages
 pagebuild(pagecount)
-#restart common page region
+# restart common page region
 $page = "
           <li class='nuchecker'><a target='_blank'>Valid HTML</a>
         </ul>
@@ -164,17 +163,17 @@ $page = "
     <script type='text/javascript'>
       // Load the Visualization API and the corechart package.
       google.charts.load('current', {'packages':['corechart']})\n"
-#continue to build all the pages
+# continue to build all the pages
 pagebuild(pagecount)
-#add all the javascript for each pie chart to each page
+# add all the javascript for each pie chart to each page
 $structure.map.with_index do |chart, ind|
-  data0 = chart[0].tr('<"=: ','')
+  data0 = chart[0].tr('<"=: ', '')
   data1 = chart[1..-1]
   v = 'Values'
   i = (ind / 50).ceil
   instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "        google.charts.setOnLoadCallback(drawChart#{data0});\n" + drawChart("#{data0}", data1, "#{chart[0]}", "#{v}", "#{charttitle(chart[0], ind)}", "#{data0}"))
 end
-#restart common page region
+# restart common page region
 $page = "
     </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -194,9 +193,9 @@ $page = "
     </script>
   </body>
 </html>"
-#finish building all the pages
+# finish building all the pages
 pagebuild(pagecount)
-#write all the HTML pages to files
+# write all the HTML pages to files
 (0..pagecount).map do |i|
   file = File.open("index#{i > 0 ? i : ''}.html", 'w')
   file.write(instance_variable_get("@page#{i > 0 ? i : ''}"))
