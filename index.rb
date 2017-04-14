@@ -57,6 +57,14 @@ def page_build(pagecount)
     instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + $page)
   end
 end
+# add navigation hyperlinks
+def add_links(pagecount, page)
+  (0..pagecount).map do |i|
+    page += "
+            <li><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>"
+  end
+  page
+end
 # chart size variables
 width = 400
 height = 330
@@ -111,11 +119,7 @@ pagecount = structure.size / 50
   instance_variable_set("@page#{i > 0 ? i : ''}", $page)
 end
 # restart common page region
-$page = ''
-# add page links to header
-(0..pagecount).map do |i|
-  $page += "            <li><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>\n"
-end
+$page = add_links(pagecount, '')
 # continue to build all the pages
 page_build(pagecount)
 # restart common page region
@@ -139,21 +143,16 @@ $page = "
     <footer>
       <div class='container'>
         <ul class='list-unstyled'>
-          <li><a href='#head1'>Back to top</a></li>"
+            <li><a href='#head1'>Back to top</a></li>"
 # continue to build all the pages
 page_build(pagecount)
 #restart common page region
-$page = ''
-# add page links to footer
-(0..pagecount).map do |i|
-  $page += "
-          <li><a href='index#{i > 0 ? i : ''}.html'>Page #{i + 1}</a></li>"
-end
+$page = add_links(pagecount, '')
 # continue to build all the pages
 page_build(pagecount)
 # restart common page region
 $page = "
-          <li class='nuchecker'><a target='_blank'>Valid HTML</a>
+            <li class='nuchecker'><a target='_blank'>Valid HTML</a>
         </ul>
         <a href='http://s05.flagcounter.com/more/BHT'><img src='http://s05.flagcounter.com/count2/BHT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/' alt='Flag Counter'></a>
       </div>
