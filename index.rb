@@ -135,7 +135,7 @@ page_build(pagecount)
 # add chart divs to each page
 structure.map.with_index do |chart, i|
   data0 = chart[0].tr('<"=: ', '')
-  i = i / 50
+  i /= 50
   instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "\n       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_#{data0}'></div>")
 end
 # restart common page region
@@ -147,7 +147,7 @@ $page = "
             <li><a href='#head1'>Back to top</a></li>"
 # continue to build all the pages
 page_build(pagecount)
-#restart common page region
+# restart common page region
 $page = add_links(pagecount)
 # continue to build all the pages
 page_build(pagecount)
