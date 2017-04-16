@@ -176,7 +176,7 @@ structure.map.with_index do |chart, ind|
   data1 = chart[1..-1]
   v = 'Values'
   i = ind / 50
-  instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "        google.charts.setOnLoadCallback(drawChart#{data0});\n" + draw_chart("#{data0}", data1, "#{chart[0]}", "#{v}", "#{chart_title(chart[0], ind)}", "#{data0}", width, height))
+  instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "        google.charts.setOnLoadCallback(drawChart#{data0});\n" + draw_chart(data0, data1, chart[0], v, chart_title(chart[0], ind), data0, width, height))
 end
 # restart common page region
 $page = "
