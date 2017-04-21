@@ -66,6 +66,10 @@ def add_links(pagecount)
   end
   page
 end
+# remove special characters as they clash with JavaScript's naming conventions
+def clean_chart(chart)
+  chart.tr('<"=: ', '')
+end
 # chart size variables
 width = 400
 height = 330
@@ -124,27 +128,27 @@ $page = add_links(pagecount)
 # continue to build all the pages
 page_build(pagecount)
 # restart common page region
-$page = "
+$page = '
           </ul>
         </div>
       </div>
     </nav>
-    <div class=\"container-fluid\">"
+    <div class="container-fluid">'
 # continue to build all the pages
 page_build(pagecount)
 # add chart divs to each page
 structure.map.with_index do |chart, i|
-  data0 = chart[0].tr('<"=: ', '')
+  data0 = clean_chart(chart[0])
   i /= 50
   instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "\n       <div class=\"col-sm-6 col-md-4 col-lg-3\" id=\"chart_div_#{data0}\"></div>")
 end
 # restart common page region
-$page = "
+$page = '
     </div>
     <footer>
-      <div class=\"container\">
-        <ul class=\"list-unstyled\">
-            <li><a href=\"#head1\">Back to top</a></li>"
+      <div class="container">
+        <ul class="list-unstyled">
+            <li><a href="#head1">Back to top</a></li>'
 # continue to build all the pages
 page_build(pagecount)
 # restart common page region
@@ -152,27 +156,27 @@ $page = add_links(pagecount)
 # continue to build all the pages
 page_build(pagecount)
 # restart common page region
-$page = "
-            <li class=\"nuchecker\"><a target=\"_blank\">Valid HTML</a>
+$page = '
+            <li class="nuchecker"><a target="_blank">Valid HTML</a>
         </ul>
-        <a href=\"http://s05.flagcounter.com/more/BHT\"><img src=\"http://s05.flagcounter.com/count2/BHT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/\" alt=\"Flag Counter\"></a>
+        <a href="http://s05.flagcounter.com/more/BHT"><img src="http://s05.flagcounter.com/count2/BHT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter"></a>
       </div>
     </footer>
     <!--Load the AJAX API-->
-    <script src=\"https://www.gstatic.com/charts/loader.js\"></script>
-    <script src=\"https://www.google.com/jsapi\"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src=\"bootstrap/js/jquery.min.js\"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://www.google.com/jsapi"></script>
+    <!-- jQuery (necessary for Bootstrap\'s JavaScript plugins) -->
+    <script src="bootstrap/js/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src=\"bootstrap/js/bootstrap.min.js\"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <script>
       // Load the Visualization API and the corechart package.
-      google.charts.load(\"current\", {\"packages\":[\"corechart\"]});\n"
+      google.charts.load("current", {"packages":["corechart"]});'+"\n"
 # continue to build all the pages
 page_build(pagecount)
 # add all the javascript for each pie chart to each page
 structure.map.with_index do |chart, ind|
-  data0 = chart[0].tr('<"=: ', '')
+  data0 = clean_chart(chart[0])
   data1 = chart[1..-1]
   v = 'Values'
   i = ind / 50
