@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Analytics Dashboard</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel='stylesheet' href='bootstrap/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- Optional theme -->
-    <link rel='stylesheet' href='bootstrap/css/bootstrap-theme.min.css'>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
     <style>
       .container-fluid { padding: 0px; }
       .navbar, .navbar-default { padding: 5pt; background-color: rgba(49,37,152,0.8) !important; font-size: 12pt; }
@@ -25,135 +25,135 @@
   </head>
   <body>
     <!-- Static navbar -->
-    <nav class='navbar navbar-default'>
-      <div class='container-fluid'>
-        <div class='navbar-header'>
-          <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar' aria-expanded='false' aria-controls='navbar'>
-            <span class='sr-only'>Toggle navigation</span>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
-          <a class='navbar-brand' href='index.html' id='head1'>Analytics Dashboard</a>
+          <a class="navbar-brand" href="index.html" id="head1">Analytics Dashboard</a>
         </div>
-        <div id='navbar' class='navbar-collapse collapse'>
-          <ul class='nav navbar-nav'>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
 
-            <li><a href='index.html'>Page 1</a></li>
-            <li><a href='index1.html'>Page 2</a></li>
-            <li><a href='index2.html'>Page 3</a></li>
-            <li><a href='index3.html'>Page 4</a></li>
-            <li><a href='index4.html'>Page 5</a></li>
-            <li><a href='index5.html'>Page 6</a></li>
-            <li><a href='index6.html'>Page 7</a></li>
-            <li><a href='index7.html'>Page 8</a></li>
-            <li><a href='index8.html'>Page 9</a></li>
-            <li><a href='index9.html'>Page 10</a></li>
-            <li><a href='index10.html'>Page 11</a></li>
-            <li><a href='index11.html'>Page 12</a></li>
+            <li><a href="index.html">Page 1</a></li>
+            <li><a href="index1.html">Page 2</a></li>
+            <li><a href="index2.html">Page 3</a></li>
+            <li><a href="index3.html">Page 4</a></li>
+            <li><a href="index4.html">Page 5</a></li>
+            <li><a href="index5.html">Page 6</a></li>
+            <li><a href="index6.html">Page 7</a></li>
+            <li><a href="index7.html">Page 8</a></li>
+            <li><a href="index8.html">Page 9</a></li>
+            <li><a href="index9.html">Page 10</a></li>
+            <li><a href="index10.html">Page 11</a></li>
+            <li><a href="index11.html">Page 12</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class='container-fluid'>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnamePGPKeyID'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnamePGPKeyPacket'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnamePgenCounter'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameProxyRestriction'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameQ'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameRSAKeyValue'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameRecipientKeyInfo'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameReference'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameRequestedAuthnContext'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameRequesterID'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameResponse'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameRetrievalMethod'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSPKIData'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSPKISexp'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameScoping'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSeed'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSessionIndex'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSignature'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSignatureMethod'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSignatureProperties'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSignatureProperty'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSignatureValue'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSignedInfo'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameStatement'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameStatus'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameStatusCode'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameStatusDetail'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameStatusMessage'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSubject'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSubjectConfirmation'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSubjectConfirmationData'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSubjectLocality'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameSubjectQuery'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameTerminate'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameTransform'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameTransforms'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameX509CRL'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameX509Certificate'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameX509Data'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameX509IssuerName'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameX509IssuerSerial'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameX509SKI'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameX509SerialNumber'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameX509SubjectName'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameXPath'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnameY'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnamebook'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnamebookstore'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnamedate'></div>
-       <div class='col-sm-6 col-md-4 col-lg-3' id='chart_div_xselementnamedinner_menu'></div>
+    <div class="container-fluid">
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnamePGPKeyID"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnamePGPKeyPacket"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnamePgenCounter"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameProxyRestriction"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameQ"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameRSAKeyValue"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameRecipientKeyInfo"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameReference"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameRequestedAuthnContext"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameRequesterID"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameResponse"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameRetrievalMethod"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSPKIData"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSPKISexp"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameScoping"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSeed"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSessionIndex"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSignature"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSignatureMethod"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSignatureProperties"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSignatureProperty"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSignatureValue"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSignedInfo"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameStatement"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameStatus"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameStatusCode"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameStatusDetail"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameStatusMessage"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSubject"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSubjectConfirmation"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSubjectConfirmationData"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSubjectLocality"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameSubjectQuery"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameTerminate"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameTransform"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameTransforms"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameX509CRL"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameX509Certificate"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameX509Data"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameX509IssuerName"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameX509IssuerSerial"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameX509SKI"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameX509SerialNumber"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameX509SubjectName"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameXPath"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnameY"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnamebook"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnamebookstore"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnamedate"></div>
+       <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xselementnamedinner_menu"></div>
     </div>
     <footer>
-      <div class='container'>
-        <ul class='list-unstyled'>
-            <li><a href='#head1'>Back to top</a></li>
-            <li><a href='index.html'>Page 1</a></li>
-            <li><a href='index1.html'>Page 2</a></li>
-            <li><a href='index2.html'>Page 3</a></li>
-            <li><a href='index3.html'>Page 4</a></li>
-            <li><a href='index4.html'>Page 5</a></li>
-            <li><a href='index5.html'>Page 6</a></li>
-            <li><a href='index6.html'>Page 7</a></li>
-            <li><a href='index7.html'>Page 8</a></li>
-            <li><a href='index8.html'>Page 9</a></li>
-            <li><a href='index9.html'>Page 10</a></li>
-            <li><a href='index10.html'>Page 11</a></li>
-            <li><a href='index11.html'>Page 12</a></li>
-            <li class='nuchecker'><a target='_blank'>Valid HTML</a>
+      <div class="container">
+        <ul class="list-unstyled">
+            <li><a href="#head1">Back to top</a></li>
+            <li><a href="index.html">Page 1</a></li>
+            <li><a href="index1.html">Page 2</a></li>
+            <li><a href="index2.html">Page 3</a></li>
+            <li><a href="index3.html">Page 4</a></li>
+            <li><a href="index4.html">Page 5</a></li>
+            <li><a href="index5.html">Page 6</a></li>
+            <li><a href="index6.html">Page 7</a></li>
+            <li><a href="index7.html">Page 8</a></li>
+            <li><a href="index8.html">Page 9</a></li>
+            <li><a href="index9.html">Page 10</a></li>
+            <li><a href="index10.html">Page 11</a></li>
+            <li><a href="index11.html">Page 12</a></li>
+            <li class="nuchecker"><a target="_blank">Valid HTML</a>
         </ul>
-        <a href='http://s05.flagcounter.com/more/BHT'><img src='http://s05.flagcounter.com/count2/BHT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/' alt='Flag Counter'></a>
+        <a href="http://s05.flagcounter.com/more/BHT"><img src="http://s05.flagcounter.com/count2/BHT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter"></a>
       </div>
     </footer>
     <!--Load the AJAX API-->
-    <script src='https://www.gstatic.com/charts/loader.js'></script>
-    <script src='https://www.google.com/jsapi'></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://www.google.com/jsapi"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src='bootstrap/js/jquery.min.js'></script>
+    <script src="bootstrap/js/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src='bootstrap/js/bootstrap.min.js'></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <script>
       // Load the Visualization API and the corechart package.
-      google.charts.load('current', {'packages':['corechart']});
+      google.charts.load("current", {"packages":["corechart"]});
         google.charts.setOnLoadCallback(drawChartxselementnamePGPKeyID);
 
         function drawChartxselementnamePGPKeyID() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="PGPKeyID"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='PGPKeyID'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '201 - Branch gh-pages count of: <xs:element name="PGPKeyID" grouped by file',
+          var options = {"title": "201 - Branch gh-pages count of: <xs:element name='PGPKeyID' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnamePGPKeyID'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnamePGPKeyID"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnamePGPKeyPacket);
@@ -161,17 +161,17 @@
         function drawChartxselementnamePGPKeyPacket() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="PGPKeyPacket"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='PGPKeyPacket'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 2]]);
           // Set chart options
-          var options = {'title': '202 - Branch gh-pages count of: <xs:element name="PGPKeyPacket" grouped by file',
+          var options = {"title": "202 - Branch gh-pages count of: <xs:element name='PGPKeyPacket' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnamePGPKeyPacket'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnamePGPKeyPacket"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnamePgenCounter);
@@ -179,17 +179,17 @@
         function drawChartxselementnamePgenCounter() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="PgenCounter"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='PgenCounter'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '203 - Branch gh-pages count of: <xs:element name="PgenCounter" grouped by file',
+          var options = {"title": "203 - Branch gh-pages count of: <xs:element name='PgenCounter' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnamePgenCounter'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnamePgenCounter"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameProxyRestriction);
@@ -197,17 +197,17 @@
         function drawChartxselementnameProxyRestriction() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="ProxyRestriction"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='ProxyRestriction'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '204 - Branch gh-pages count of: <xs:element name="ProxyRestriction" grouped by file',
+          var options = {"title": "204 - Branch gh-pages count of: <xs:element name='ProxyRestriction' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameProxyRestriction'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameProxyRestriction"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameQ);
@@ -215,17 +215,17 @@
         function drawChartxselementnameQ() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="Q"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='Q'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '205 - Branch gh-pages count of: <xs:element name="Q" grouped by file',
+          var options = {"title": "205 - Branch gh-pages count of: <xs:element name='Q' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameQ'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameQ"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameRSAKeyValue);
@@ -233,17 +233,17 @@
         function drawChartxselementnameRSAKeyValue() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="RSAKeyValue"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='RSAKeyValue'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '206 - Branch gh-pages count of: <xs:element name="RSAKeyValue" grouped by file',
+          var options = {"title": "206 - Branch gh-pages count of: <xs:element name='RSAKeyValue' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameRSAKeyValue'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameRSAKeyValue"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameRecipientKeyInfo);
@@ -251,17 +251,17 @@
         function drawChartxselementnameRecipientKeyInfo() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="RecipientKeyInfo"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='RecipientKeyInfo'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 1], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '207 - Branch gh-pages count of: <xs:element name="RecipientKeyInfo" grouped by file',
+          var options = {"title": "207 - Branch gh-pages count of: <xs:element name='RecipientKeyInfo' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameRecipientKeyInfo'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameRecipientKeyInfo"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameReference);
@@ -269,17 +269,17 @@
         function drawChartxselementnameReference() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="Reference"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='Reference'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '208 - Branch gh-pages count of: <xs:element name="Reference" grouped by file',
+          var options = {"title": "208 - Branch gh-pages count of: <xs:element name='Reference' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameReference'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameReference"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameRequestedAuthnContext);
@@ -287,17 +287,17 @@
         function drawChartxselementnameRequestedAuthnContext() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="RequestedAuthnContext"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='RequestedAuthnContext'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '209 - Branch gh-pages count of: <xs:element name="RequestedAuthnContext" grouped by file',
+          var options = {"title": "209 - Branch gh-pages count of: <xs:element name='RequestedAuthnContext' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameRequestedAuthnContext'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameRequestedAuthnContext"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameRequesterID);
@@ -305,17 +305,17 @@
         function drawChartxselementnameRequesterID() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="RequesterID"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='RequesterID'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '210 - Branch gh-pages count of: <xs:element name="RequesterID" grouped by file',
+          var options = {"title": "210 - Branch gh-pages count of: <xs:element name='RequesterID' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameRequesterID'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameRequesterID"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameResponse);
@@ -323,17 +323,17 @@
         function drawChartxselementnameResponse() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="Response"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='Response'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '211 - Branch gh-pages count of: <xs:element name="Response" grouped by file',
+          var options = {"title": "211 - Branch gh-pages count of: <xs:element name='Response' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameResponse'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameResponse"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameRetrievalMethod);
@@ -341,17 +341,17 @@
         function drawChartxselementnameRetrievalMethod() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="RetrievalMethod"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='RetrievalMethod'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '212 - Branch gh-pages count of: <xs:element name="RetrievalMethod" grouped by file',
+          var options = {"title": "212 - Branch gh-pages count of: <xs:element name='RetrievalMethod' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameRetrievalMethod'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameRetrievalMethod"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSPKIData);
@@ -359,17 +359,17 @@
         function drawChartxselementnameSPKIData() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="SPKIData"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='SPKIData'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '213 - Branch gh-pages count of: <xs:element name="SPKIData" grouped by file',
+          var options = {"title": "213 - Branch gh-pages count of: <xs:element name='SPKIData' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSPKIData'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSPKIData"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSPKISexp);
@@ -377,17 +377,17 @@
         function drawChartxselementnameSPKISexp() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="SPKISexp"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='SPKISexp'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '214 - Branch gh-pages count of: <xs:element name="SPKISexp" grouped by file',
+          var options = {"title": "214 - Branch gh-pages count of: <xs:element name='SPKISexp' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSPKISexp'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSPKISexp"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameScoping);
@@ -395,17 +395,17 @@
         function drawChartxselementnameScoping() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="Scoping"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='Scoping'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '215 - Branch gh-pages count of: <xs:element name="Scoping" grouped by file',
+          var options = {"title": "215 - Branch gh-pages count of: <xs:element name='Scoping' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameScoping'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameScoping"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSeed);
@@ -413,17 +413,17 @@
         function drawChartxselementnameSeed() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="Seed"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='Seed'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '216 - Branch gh-pages count of: <xs:element name="Seed" grouped by file',
+          var options = {"title": "216 - Branch gh-pages count of: <xs:element name='Seed' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSeed'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSeed"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSessionIndex);
@@ -431,17 +431,17 @@
         function drawChartxselementnameSessionIndex() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="SessionIndex"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='SessionIndex'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '217 - Branch gh-pages count of: <xs:element name="SessionIndex" grouped by file',
+          var options = {"title": "217 - Branch gh-pages count of: <xs:element name='SessionIndex' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSessionIndex'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSessionIndex"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSignature);
@@ -449,17 +449,17 @@
         function drawChartxselementnameSignature() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="Signature"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='Signature'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '218 - Branch gh-pages count of: <xs:element name="Signature" grouped by file',
+          var options = {"title": "218 - Branch gh-pages count of: <xs:element name='Signature' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSignature'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSignature"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSignatureMethod);
@@ -467,17 +467,17 @@
         function drawChartxselementnameSignatureMethod() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="SignatureMethod"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='SignatureMethod'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '219 - Branch gh-pages count of: <xs:element name="SignatureMethod" grouped by file',
+          var options = {"title": "219 - Branch gh-pages count of: <xs:element name='SignatureMethod' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSignatureMethod'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSignatureMethod"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSignatureProperties);
@@ -485,17 +485,17 @@
         function drawChartxselementnameSignatureProperties() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="SignatureProperties"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='SignatureProperties'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '220 - Branch gh-pages count of: <xs:element name="SignatureProperties" grouped by file',
+          var options = {"title": "220 - Branch gh-pages count of: <xs:element name='SignatureProperties' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSignatureProperties'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSignatureProperties"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSignatureProperty);
@@ -503,17 +503,17 @@
         function drawChartxselementnameSignatureProperty() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="SignatureProperty"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='SignatureProperty'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '221 - Branch gh-pages count of: <xs:element name="SignatureProperty" grouped by file',
+          var options = {"title": "221 - Branch gh-pages count of: <xs:element name='SignatureProperty' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSignatureProperty'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSignatureProperty"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSignatureValue);
@@ -521,17 +521,17 @@
         function drawChartxselementnameSignatureValue() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="SignatureValue"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='SignatureValue'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '222 - Branch gh-pages count of: <xs:element name="SignatureValue" grouped by file',
+          var options = {"title": "222 - Branch gh-pages count of: <xs:element name='SignatureValue' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSignatureValue'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSignatureValue"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSignedInfo);
@@ -539,17 +539,17 @@
         function drawChartxselementnameSignedInfo() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="SignedInfo"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='SignedInfo'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '223 - Branch gh-pages count of: <xs:element name="SignedInfo" grouped by file',
+          var options = {"title": "223 - Branch gh-pages count of: <xs:element name='SignedInfo' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSignedInfo'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSignedInfo"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameStatement);
@@ -557,17 +557,17 @@
         function drawChartxselementnameStatement() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="Statement"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='Statement'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '224 - Branch gh-pages count of: <xs:element name="Statement" grouped by file',
+          var options = {"title": "224 - Branch gh-pages count of: <xs:element name='Statement' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameStatement'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameStatement"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameStatus);
@@ -575,17 +575,17 @@
         function drawChartxselementnameStatus() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="Status"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='Status'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '225 - Branch gh-pages count of: <xs:element name="Status" grouped by file',
+          var options = {"title": "225 - Branch gh-pages count of: <xs:element name='Status' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameStatus'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameStatus"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameStatusCode);
@@ -593,17 +593,17 @@
         function drawChartxselementnameStatusCode() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="StatusCode"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='StatusCode'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '226 - Branch gh-pages count of: <xs:element name="StatusCode" grouped by file',
+          var options = {"title": "226 - Branch gh-pages count of: <xs:element name='StatusCode' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameStatusCode'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameStatusCode"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameStatusDetail);
@@ -611,17 +611,17 @@
         function drawChartxselementnameStatusDetail() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="StatusDetail"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='StatusDetail'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '227 - Branch gh-pages count of: <xs:element name="StatusDetail" grouped by file',
+          var options = {"title": "227 - Branch gh-pages count of: <xs:element name='StatusDetail' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameStatusDetail'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameStatusDetail"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameStatusMessage);
@@ -629,17 +629,17 @@
         function drawChartxselementnameStatusMessage() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="StatusMessage"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='StatusMessage'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '228 - Branch gh-pages count of: <xs:element name="StatusMessage" grouped by file',
+          var options = {"title": "228 - Branch gh-pages count of: <xs:element name='StatusMessage' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameStatusMessage'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameStatusMessage"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSubject);
@@ -647,17 +647,17 @@
         function drawChartxselementnameSubject() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="Subject"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='Subject'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '229 - Branch gh-pages count of: <xs:element name="Subject" grouped by file',
+          var options = {"title": "229 - Branch gh-pages count of: <xs:element name='Subject' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSubject'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSubject"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSubjectConfirmation);
@@ -665,17 +665,17 @@
         function drawChartxselementnameSubjectConfirmation() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="SubjectConfirmation"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='SubjectConfirmation'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '230 - Branch gh-pages count of: <xs:element name="SubjectConfirmation" grouped by file',
+          var options = {"title": "230 - Branch gh-pages count of: <xs:element name='SubjectConfirmation' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSubjectConfirmation'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSubjectConfirmation"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSubjectConfirmationData);
@@ -683,17 +683,17 @@
         function drawChartxselementnameSubjectConfirmationData() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="SubjectConfirmationData"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='SubjectConfirmationData'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '231 - Branch gh-pages count of: <xs:element name="SubjectConfirmationData" grouped by file',
+          var options = {"title": "231 - Branch gh-pages count of: <xs:element name='SubjectConfirmationData' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSubjectConfirmationData'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSubjectConfirmationData"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSubjectLocality);
@@ -701,17 +701,17 @@
         function drawChartxselementnameSubjectLocality() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="SubjectLocality"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='SubjectLocality'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '232 - Branch gh-pages count of: <xs:element name="SubjectLocality" grouped by file',
+          var options = {"title": "232 - Branch gh-pages count of: <xs:element name='SubjectLocality' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSubjectLocality'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSubjectLocality"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameSubjectQuery);
@@ -719,17 +719,17 @@
         function drawChartxselementnameSubjectQuery() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="SubjectQuery"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='SubjectQuery'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '233 - Branch gh-pages count of: <xs:element name="SubjectQuery" grouped by file',
+          var options = {"title": "233 - Branch gh-pages count of: <xs:element name='SubjectQuery' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameSubjectQuery'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameSubjectQuery"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameTerminate);
@@ -737,17 +737,17 @@
         function drawChartxselementnameTerminate() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="Terminate"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='Terminate'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '234 - Branch gh-pages count of: <xs:element name="Terminate" grouped by file',
+          var options = {"title": "234 - Branch gh-pages count of: <xs:element name='Terminate' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameTerminate'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameTerminate"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameTransform);
@@ -755,17 +755,17 @@
         function drawChartxselementnameTransform() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="Transform"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='Transform'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '235 - Branch gh-pages count of: <xs:element name="Transform" grouped by file',
+          var options = {"title": "235 - Branch gh-pages count of: <xs:element name='Transform' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameTransform'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameTransform"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameTransforms);
@@ -773,17 +773,17 @@
         function drawChartxselementnameTransforms() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="Transforms"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='Transforms'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '236 - Branch gh-pages count of: <xs:element name="Transforms" grouped by file',
+          var options = {"title": "236 - Branch gh-pages count of: <xs:element name='Transforms' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameTransforms'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameTransforms"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameX509CRL);
@@ -791,17 +791,17 @@
         function drawChartxselementnameX509CRL() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="X509CRL"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='X509CRL'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '237 - Branch gh-pages count of: <xs:element name="X509CRL" grouped by file',
+          var options = {"title": "237 - Branch gh-pages count of: <xs:element name='X509CRL' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameX509CRL'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameX509CRL"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameX509Certificate);
@@ -809,17 +809,17 @@
         function drawChartxselementnameX509Certificate() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="X509Certificate"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='X509Certificate'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '238 - Branch gh-pages count of: <xs:element name="X509Certificate" grouped by file',
+          var options = {"title": "238 - Branch gh-pages count of: <xs:element name='X509Certificate' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameX509Certificate'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameX509Certificate"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameX509Data);
@@ -827,17 +827,17 @@
         function drawChartxselementnameX509Data() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="X509Data"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='X509Data'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '239 - Branch gh-pages count of: <xs:element name="X509Data" grouped by file',
+          var options = {"title": "239 - Branch gh-pages count of: <xs:element name='X509Data' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameX509Data'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameX509Data"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameX509IssuerName);
@@ -845,17 +845,17 @@
         function drawChartxselementnameX509IssuerName() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="X509IssuerName"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='X509IssuerName'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '240 - Branch gh-pages count of: <xs:element name="X509IssuerName" grouped by file',
+          var options = {"title": "240 - Branch gh-pages count of: <xs:element name='X509IssuerName' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameX509IssuerName'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameX509IssuerName"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameX509IssuerSerial);
@@ -863,17 +863,17 @@
         function drawChartxselementnameX509IssuerSerial() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="X509IssuerSerial"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='X509IssuerSerial'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '241 - Branch gh-pages count of: <xs:element name="X509IssuerSerial" grouped by file',
+          var options = {"title": "241 - Branch gh-pages count of: <xs:element name='X509IssuerSerial' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameX509IssuerSerial'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameX509IssuerSerial"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameX509SKI);
@@ -881,17 +881,17 @@
         function drawChartxselementnameX509SKI() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="X509SKI"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='X509SKI'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '242 - Branch gh-pages count of: <xs:element name="X509SKI" grouped by file',
+          var options = {"title": "242 - Branch gh-pages count of: <xs:element name='X509SKI' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameX509SKI'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameX509SKI"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameX509SerialNumber);
@@ -899,17 +899,17 @@
         function drawChartxselementnameX509SerialNumber() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="X509SerialNumber"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='X509SerialNumber'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '243 - Branch gh-pages count of: <xs:element name="X509SerialNumber" grouped by file',
+          var options = {"title": "243 - Branch gh-pages count of: <xs:element name='X509SerialNumber' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameX509SerialNumber'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameX509SerialNumber"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameX509SubjectName);
@@ -917,17 +917,17 @@
         function drawChartxselementnameX509SubjectName() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="X509SubjectName"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='X509SubjectName'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '244 - Branch gh-pages count of: <xs:element name="X509SubjectName" grouped by file',
+          var options = {"title": "244 - Branch gh-pages count of: <xs:element name='X509SubjectName' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameX509SubjectName'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameX509SubjectName"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameXPath);
@@ -935,17 +935,17 @@
         function drawChartxselementnameXPath() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="XPath"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='XPath'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '245 - Branch gh-pages count of: <xs:element name="XPath" grouped by file',
+          var options = {"title": "245 - Branch gh-pages count of: <xs:element name='XPath' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameXPath'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameXPath"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnameY);
@@ -953,17 +953,17 @@
         function drawChartxselementnameY() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="Y"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='Y'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 1]]);
           // Set chart options
-          var options = {'title': '246 - Branch gh-pages count of: <xs:element name="Y" grouped by file',
+          var options = {"title": "246 - Branch gh-pages count of: <xs:element name='Y' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnameY'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnameY"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnamebook);
@@ -971,17 +971,17 @@
         function drawChartxselementnamebook() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="book"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='book'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 1], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '247 - Branch gh-pages count of: <xs:element name="book" grouped by file',
+          var options = {"title": "247 - Branch gh-pages count of: <xs:element name='book' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnamebook'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnamebook"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnamebookstore);
@@ -989,17 +989,17 @@
         function drawChartxselementnamebookstore() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="bookstore"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='bookstore'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 1], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '248 - Branch gh-pages count of: <xs:element name="bookstore" grouped by file',
+          var options = {"title": "248 - Branch gh-pages count of: <xs:element name='bookstore' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnamebookstore'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnamebookstore"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnamedate);
@@ -1007,17 +1007,17 @@
         function drawChartxselementnamedate() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="date"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='date'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 0], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 1], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '249 - Branch gh-pages count of: <xs:element name="date" grouped by file',
+          var options = {"title": "249 - Branch gh-pages count of: <xs:element name='date' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnamedate'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnamedate"));
           chart.draw(data, options);
         }
         google.charts.setOnLoadCallback(drawChartxselementnamedinner_menu);
@@ -1025,33 +1025,33 @@
         function drawChartxselementnamedinner_menu() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn('string', '<xs:element name="dinner_menu"');
-          data.addColumn('number', 'Values');
+          data.addColumn("string", "<xs:element name='dinner_menu'");
+          data.addColumn("number", "Values");
           data.addRows([["bar.xsd", 0], ["bookstore.xsd", 0], ["dinner-menu.xsd", 1], ["foo.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["xmldsig_schema.xsd", 0]]);
           // Set chart options
-          var options = {'title': '250 - Branch gh-pages count of: <xs:element name="dinner_menu" grouped by file',
+          var options = {"title": "250 - Branch gh-pages count of: <xs:element name='dinner_menu' grouped by file",
                          is3D: true,
-                         'width': 400,
-                         'height': 330,
-                         'titleTextStyle': { 'color': 'black' } };
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart_div_xselementnamedinner_menu'));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xselementnamedinner_menu"));
           chart.draw(data, options);
         }
 
       $(document).ready(function () {
-         'use strict';
-         var last = $(location).attr('href').split('/').slice(-1)[0].split('.')[0].replace(/index/, '');
+         "use strict";
+         var last = $(location).attr("href").split("/").slice(-1)[0].split(".")[0].replace(/index/, "");
          var tab = 1;
-         if (last !== '') {
+         if (last !== "") {
            tab = parseInt(last) + 1;
          }
-         $('.navbar-nav li:nth-child(' + tab + ')').addClass('selected');
+         $(".navbar-nav li:nth-child(" + tab + ")").addClass("selected");
          tab--;
          if (tab === 0) {
-           tab = '';
+           tab = "";
          }
-         $('.nuchecker a').attr('href', 'https://validator.w3.org/nu/?doc=http%3A%2F%2Fthebeast.me%2Fdashboard-2%2Findex' + tab + '.html');
+         $(".nuchecker a").attr("href", "https://validator.w3.org/nu/?doc=http%3A%2F%2Fthebeast.me%2Fdashboard-2%2Findex" + tab + ".html");
       });
     </script>
   </body>
