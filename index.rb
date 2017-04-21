@@ -31,17 +31,21 @@ end
 def chart_title(charttype, ind)
   "#{ind + 1} - Branch gh-pages count of: #{charttype} grouped by file"
 end
+# common function to escape double quotes
+def escape(s)
+  s.gsub('"', '\"')
+end
 # common function for each chart
 def draw_chart(whichChart, data, chartstring, chartnumber, charttitle, chartdiv, width, height)
       "
         function drawChart#{whichChart}() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn(\"string\", \"#{chartstring.gsub('"',"'")}\");
+          data.addColumn(\"string\", \"#{escape(chartstring)}\");
           data.addColumn(\"number\", \"#{chartnumber}\");
           data.addRows(#{data});
           // Set chart options
-          var options = {\"title\": \"#{charttitle.gsub('"',"'")}\",
+          var options = {\"title\": \"#{escape(charttitle)}\",
                          is3D: true,
                          \"width\": #{width},
                          \"height\": #{height},
