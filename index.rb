@@ -27,49 +27,55 @@ def generate_data
   end
   structure
 end
+
 # common function that prints the chart title
 def chart_title(charttype, ind)
   "#{ind + 1} - Branch gh-pages count of: #{charttype} grouped by file"
 end
+
 # common function to escape double quotes
 def escape(s)
   s.gsub('"', '\"')
 end
+
 # common function for each chart
 def draw_chart(whichChart, data, chartstring, chartnumber, charttitle, chartdiv, width, height)
-      "
+      %(
         function drawChart#{whichChart}() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn(\"string\", \"#{escape(chartstring)}\");
-          data.addColumn(\"number\", \"#{chartnumber}\");
+          data.addColumn("string", "#{escape(chartstring)}");
+          data.addColumn("number", "#{chartnumber}");
           data.addRows(#{data});
           // Set chart options
-          var options = {\"title\": \"#{escape(charttitle)}\",
+          var options = {"title": "#{escape(charttitle)}",
                          is3D: true,
-                         \"width\": #{width},
-                         \"height\": #{height},
-                         \"titleTextStyle\": {\"color\": \"black\"}};
+                         "width": #{width},
+                         "height": #{height},
+                         "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById(\"chart_div_#{chartdiv}\"));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_#{chartdiv}"));
           chart.draw(data, options);
-        }\n"
+        }\n)
 end
+
 # buld all the website pages
 def page_build(pagecount)
   (0..pagecount).map do |i|
     instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + $page)
   end
 end
+
 # add navigation hyperlinks
 def add_links(pagecount)
   page = ''
   (0..pagecount).map do |i|
-    page += "
-            <li><a href=\"index#{i > 0 ? i : ''}.html\">Page #{i + 1}</a></li>"
+    page += %(
+            <li><a href="index#{i > 0 ? i : ''}.html">Page #{i + 1}</a></li>)
   end
   page
 end
+
 # remove special characters as they clash with JavaScript's naming conventions
 def clean_chart(chart)
   chart.tr('<"=: ', '')
@@ -80,8 +86,7 @@ height = 330
 # data variable
 structure = generate_data
 # start common page region
-$page = <<-EOS
-<!DOCTYPE html>
+$page = %(<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -120,8 +125,8 @@ $page = <<-EOS
           <a class="navbar-brand" href="index.html" id="head1">Analytics Dashboard</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-EOS
+          <ul class="nav navbar-nav">)
+
 # try 50 charts per page
 pagecount = structure.size / 50
 (0..pagecount).map do |i|
