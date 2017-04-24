@@ -39,22 +39,22 @@ def escape(s)
 end
 
 # common function for each chart
-def draw_chart(whichChart, data, chartstring, chartnumber, charttitle, chartdiv, width, height)
+def draw_chart(which_chart, data, chart_string, chart_values, chart_title, chart_div, width, height)
       %(
-        function drawChart#{whichChart}() {
+        function drawChart#{which_chart}() {
           // Create the data table.
           var data = new google.visualization.DataTable();
-          data.addColumn("string", "#{escape(chartstring)}");
-          data.addColumn("number", "#{chartnumber}");
+          data.addColumn("string", "#{escape(chart_string)}");
+          data.addColumn("number", "#{chart_values}");
           data.addRows(#{data});
           // Set chart options
-          var options = {"title": "#{escape(charttitle)}",
+          var options = {"title": "#{escape(chart_title)}",
                          is3D: true,
                          "width": #{width},
                          "height": #{height},
                          "titleTextStyle": {"color": "black"}};
           // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById("chart_div_#{chartdiv}"));
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_#{chart_div}"));
           chart.draw(data, options);
         }\n)
 end
