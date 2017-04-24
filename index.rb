@@ -1,11 +1,17 @@
+# function to open and read in file
+def read_schema(schema)
+  file = File.open(schema, 'r')
+  data = file.read
+  file.close
+  data
+end
+
 # function that generates the pie chart data
 def generate_data
   tokens = []
   # loop over schema files
   Dir.glob('schema/*.xsd').map do |schema|
-    file = File.open(schema, 'r')
-    data = file.read
-    file.close
+    data = read_schema(schema)
     data.scan(/<xs:\w+|\w+="\w+"|\w+="xs:\w+"/).uniq do |x|
       tokens << x unless tokens.include? x
     end
@@ -19,9 +25,7 @@ def generate_data
     structure[i] = [x]
     Dir.glob('schema/*.xsd').map do |schema|
       filename = schema.split('/').last
-      file = File.open(schema, 'r')
-      data = file.read
-      file.close
+      data = read_schema(schema)
       structure[i] << [filename, data.scan(x).size]
     end
   end
