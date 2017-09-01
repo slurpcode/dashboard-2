@@ -199,7 +199,7 @@ end
 $page = '
       $(document).ready(function () {
          "use strict";
-         var last = $(location).attr("href").split("/").slice(-1)[0].split(".")[0].replace(/index/, "");
+         var last = $(location).attr("href").split("/").pop().split(".")[0].replace(/index/, "");
          var tab = 1;
          if (last !== "") {
            tab = parseInt(last) + 1;
