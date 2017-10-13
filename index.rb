@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # function to open and read in file
 def read_schema(schema)
   file = File.open(schema, 'r')
@@ -172,7 +174,7 @@ page_build(page_count)
 $page = %(
             <li class="nuchecker"><a target="_blank">Valid HTML</a>
         </ul>
-        <a href="http://s05.flagcounter.com/more/BHT"><img src="http://s05.flagcounter.com/count2/BHT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter"></a>
+        <a href="http://s05.flagcounter.com/more/BHT" target="_blank"><img src="http://s05.flagcounter.com/count2/BHT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter"></a>
       </div>
     </footer>
     <!--Load the AJAX API-->
