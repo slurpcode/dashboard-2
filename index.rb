@@ -65,7 +65,7 @@ def draw_chart(which_chart, data, chart_string, chart_values, chart_title, chart
         }\n)
 end
 
-# buld all the website pages
+# build all the website pages
 def page_build(page_count)
   (0..page_count).map do |i|
     instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + $page)
