@@ -98,7 +98,8 @@ $page = %(<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- The above 3 meta tags *must* come first in the head;
+         any other head content must come *after* these tags -->
     <title>Analytics Dashboard</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -132,7 +133,6 @@ $page = %(<!DOCTYPE html>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">)
-
 # try 50 charts per page
 page_count = structure.size / 50
 (0..page_count).map do |i|
@@ -172,10 +172,14 @@ $page = add_links(page_count)
 page_build(page_count)
 # restart common page region
 $page = %(
-            <li class="nuchecker"><a target="_blank" rel="noopener">Valid HTML</a></li>
+            <li class="nuchecker">
+              <a target="_blank" rel="noopener">Valid HTML</a>
+            </li>
         </ul>
-        <a href="http://s05.flagcounter.com/more/BHT" target="_blank" rel="noopener">
-          <img src="http://s05.flagcounter.com/count2/BHT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter">
+        <a href="http://s05.flagcounter.com/more/BHT"
+           target="_blank" rel="noopener">
+          <img src="http://s05.flagcounter.com/count2/BHT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/"
+               alt="Flag Counter">
         </a>
       </div>
     </footer>
