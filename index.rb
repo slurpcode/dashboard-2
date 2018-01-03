@@ -164,7 +164,12 @@ $page = '
     <footer>
       <div class="container">
         <ul class="list-unstyled">
-            <li><a href="#head1">Back to top</a></li>'
+          <li>
+            <a class="github-button" href="https://github.com/jbampton" data-size="large" data-show-count="true" aria-label="Follow @jbampton on GitHub">Follow @jbampton</a>
+          </li>
+          <li>
+            <a class="github-button" href="https://github.com/jbampton/dashboard-2" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star jbampton/dashboard-2 on GitHub">Star</a>
+          </li>'
 # continue to build all the pages
 page_build(page_count)
 # restart common page region
@@ -173,6 +178,7 @@ $page = add_links(page_count)
 page_build(page_count)
 # restart common page region
 $page = %(
+            <li><a href="#head1">Back to top</a></li>
             <li class="nuchecker">
               <a target="_blank" rel="noopener">Valid HTML</a>
             </li>
@@ -221,6 +227,7 @@ $page = '
          $(".nuchecker a").attr("href", "https://validator.w3.org/nu/?doc=http%3A%2F%2Fthebeast.me%2Fdashboard-2%2Findex" + tab + ".html");
       });
     </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>'
 # finish building all the pages
