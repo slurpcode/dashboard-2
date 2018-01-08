@@ -28,6 +28,7 @@ def generate_data
     Dir.glob('schema/*.xsd').map do |schema|
       filename = schema.split('/').last
       data = read_schema(schema)
+      filename = filename.split('.').first
       structure[i] << [filename, data.scan(x).size]
     end
   end
