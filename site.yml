@@ -6,6 +6,7 @@ back_to_top: Back to top
 
 # site colors
 nav_hover_color: red
+nav_selected_color: aliceblue
 
 # HTML elements and attributes
 # <title>

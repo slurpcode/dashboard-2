@@ -124,9 +124,9 @@ $page = %(<!DOCTYPE html>
       .navbar-default .navbar-brand { font-size: 15pt; font-weight: bold; }
       .navbar-default li:hover a, .navbar-default .navbar-brand:hover { background-color: #{site_config['nav_hover_color']} !important; }
       div[id^="chart_div"] > div > div { margin: auto; }
-      footer { background-color: ##{site_config['theme_color']}; min-height: 200px; color: #fff !important; }
+      footer { background-color: ##{site_config['theme_color']}; min-height: 200px; }
       footer ul a { color: #fff !important; }
-      .selected { background-color: aliceblue; font-weight: bold; }
+      .selected { background-color: #{site_config['nav_selected_color']}; font-weight: bold; }
       .nuchecker a { font-weight: bold; }
     </style>
   </head>
