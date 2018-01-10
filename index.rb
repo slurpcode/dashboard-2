@@ -8,6 +8,11 @@ def read_schema(schema)
   data
 end
 
+# function
+def ii(i)
+  i.positive? ? i : ''
+end
+
 # function that generates the pie chart data
 def generate_data
   tokens = []
@@ -70,7 +75,7 @@ end
 # build all the website pages
 def page_build(page_count)
   (0..page_count).map do |i|
-    instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + $page)
+    instance_variable_set("@page#{ii i}", instance_variable_get("@page#{ii i}") + $page)
   end
 end
 
@@ -79,7 +84,7 @@ def add_links(page_count)
   page = ''
   (0..page_count).map do |i|
     page += %(
-            <li><a href="index#{i > 0 ? i : ''}.html">Page #{i + 1}</a></li>)
+            <li><a href="index#{ii i}.html">Page #{i + 1}</a></li>)
   end
   page
 end
@@ -138,7 +143,7 @@ $page = %(<!DOCTYPE html>
 # try 50 charts per page
 page_count = structure.size / 50
 (0..page_count).map do |i|
-  instance_variable_set("@page#{i > 0 ? i : ''}", $page)
+  instance_variable_set("@page#{ii i}", $page)
 end
 # restart common page region
 $page = add_links(page_count)
@@ -157,7 +162,7 @@ page_build(page_count)
 structure.map.with_index do |chart, i|
   data0 = clean_chart(chart[0])
   i /= 50
-  instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "\n       <div class=\"col-sm-6 col-md-4 col-lg-3\" id=\"chart_div_#{data0}\"></div>")
+  instance_variable_set("@page#{ii i}", instance_variable_get("@page#{ii i}") + "\n       <div class=\"col-sm-6 col-md-4 col-lg-3\" id=\"chart_div_#{data0}\"></div>")
 end
 # restart common page region
 $page = '
@@ -209,7 +214,7 @@ structure.map.with_index do |chart, ind|
   data1 = chart[1..-1]
   v = 'Values'
   i = ind / 50
-  instance_variable_set("@page#{i > 0 ? i : ''}", instance_variable_get("@page#{i > 0 ? i : ''}") + "        google.charts.setOnLoadCallback(drawChart#{data0});\n" + draw_chart(data0, data1, chart[0], v, chart_title(chart[0], ind), data0, width, height))
+  instance_variable_set("@page#{ii i}", instance_variable_get("@page#{ii i}") + "        google.charts.setOnLoadCallback(drawChart#{data0});\n" + draw_chart(data0, data1, chart[0], v, chart_title(chart[0], ind), data0, width, height))
 end
 # restart common page region
 $page = '
@@ -235,7 +240,7 @@ $page = '
 page_build(page_count)
 # write all the HTML pages to files
 (0..page_count).map do |i|
-  file = File.open("index#{i > 0 ? i : ''}.html", 'w')
-  file.write(instance_variable_get("@page#{i > 0 ? i : ''}"))
+  file = File.open("index#{ii i}.html", 'w')
+  file.write(instance_variable_get("@page#{ii i}"))
   file.close
 end
