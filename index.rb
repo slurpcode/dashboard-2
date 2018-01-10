@@ -113,20 +113,20 @@ $page = %(<!DOCTYPE html>
     <!-- The above 3 meta tags *must* come first in the head;
          any other head content must come *after* these tags -->
     <title>#{site_config['title']}</title>
-    <!-- Latest compiled and minified CSS -->
+    <meta name="theme-color" content="##{site_config['theme_color']}">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- Optional theme -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
     <style>
       .container-fluid { padding: 0px; }
-      .navbar, .navbar-default { padding: 5pt; background-color: ##{site_config['theme_color']} !important; font-size: 12pt; }
+      .navbar, .navbar-default { padding: 5pt; background-color: ##{site_config['theme_color']} !important; font-size: 13pt; }
       .navbar, .navbar-default li a { color: #000 !important; }
-      .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover { color: #fff; font-size: 15pt; }
+      .navbar-default .navbar-brand { font-size: 15pt; font-weight: bold; }
+      .navbar-default li:hover a, .navbar-default .navbar-brand:hover { background-color: #{site_config['nav_hover_color']} !important; }
       div[id^="chart_div"] > div > div { margin: auto; }
       footer { background-color: ##{site_config['theme_color']}; min-height: 200px; color: #fff !important; }
       footer ul a { color: #fff !important; }
       .selected { background-color: aliceblue; font-weight: bold; }
-      .navbar-default li:hover a { background-color: red !important; }
       .nuchecker a { font-weight: bold; }
     </style>
   </head>

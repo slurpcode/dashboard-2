@@ -4,8 +4,11 @@
 valid_html: Valid HTML
 back_to_top: Back to top
 
+# site colors
+nav_hover_color: red
 
 # HTML elements and attributes
+# <title>
 title: Ruby Google charts text mining dashboard
 # meta name="theme-color"
 theme_color: '4286f4'
