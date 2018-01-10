@@ -1,12 +1,17 @@
 #!/usr/bin/env ruby
 
+require 'yaml'
+
 # function to open and read in file
-def read_schema(schema)
-  file = File.open(schema, 'r')
+def read_file(f)
+  file = File.open(f, 'r')
   data = file.read
   file.close
   data
 end
+
+# load website config file
+site_config = YAML.safe_load(read_file('site.yml'))
 
 # function
 def ii(i)
@@ -18,7 +23,7 @@ def generate_data
   tokens = []
   # loop over schema files
   Dir.glob('schema/*.xsd').map do |schema|
-    data = read_schema(schema)
+    data = read_file(schema)
     data.scan(/<xs:\w+|\w+="\w+"|\w+="xs:\w+"/).uniq do |x|
       tokens << x unless tokens.include? x
     end
@@ -32,7 +37,7 @@ def generate_data
     structure[i] = [x]
     Dir.glob('schema/*.xsd').map do |schema|
       filename = schema.split('/').last
-      data = read_schema(schema)
+      data = read_file(schema)
       filename = filename.split('.').first
       structure[i] << [filename, data.scan(x).size]
     end
@@ -52,7 +57,7 @@ end
 
 # common function for each chart
 def draw_chart(which_chart, data, chart_string, chart_values, chart_title, chart_div, width, height)
-      %(
+  %(
         function drawChart#{which_chart}() {
           // Create the data table.
           var data = new google.visualization.DataTable();
@@ -107,18 +112,18 @@ $page = %(<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head;
          any other head content must come *after* these tags -->
-    <title>Analytics Dashboard</title>
+    <title>#{site_config['title']}</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- Optional theme -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
     <style>
       .container-fluid { padding: 0px; }
-      .navbar, .navbar-default { padding: 5pt; background-color: rgba(49,37,152,0.8) !important; font-size: 12pt; }
+      .navbar, .navbar-default { padding: 5pt; background-color: ##{site_config['theme_color']} !important; font-size: 12pt; }
       .navbar, .navbar-default li a { color: #000 !important; }
       .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover { color: #fff; font-size: 15pt; }
       div[id^="chart_div"] > div > div { margin: auto; }
-      footer { background-color: rgba(49,37,152,0.8); min-height: 200px; color: #fff !important; }
+      footer { background-color: ##{site_config['theme_color']}; min-height: 200px; color: #fff !important; }
       footer ul a { color: #fff !important; }
       .selected { background-color: aliceblue; font-weight: bold; }
       .navbar-default li:hover a { background-color: red !important; }
@@ -136,7 +141,7 @@ $page = %(<!DOCTYPE html>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html" id="head1">Analytics Dashboard</a>
+          <a class="navbar-brand" href="index.html" id="head1">#{site_config['nav_heading']}</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">)
@@ -184,9 +189,9 @@ $page = add_links(page_count)
 page_build(page_count)
 # restart common page region
 $page = %(
-            <li><a href="#head1">Back to top</a></li>
+            <li><a href="#head1">#{site_config['back_to_top']}</a></li>
             <li class="nuchecker">
-              <a target="_blank" rel="noopener">Valid HTML</a>
+              <a target="_blank" rel="noopener">#{site_config['valid_html']}</a>
             </li>
         </ul>
         <a href="http://s05.flagcounter.com/more/BHT"

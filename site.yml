@@ -1,0 +1,15 @@
+# site config file
+
+# site config
+valid_html: Valid HTML
+back_to_top: Back to top
+
+
+# HTML elements and attributes
+title: Ruby Google charts text mining dashboard
+# meta name="theme-color"
+theme_color: '4286f4'
+
+# Text on web pages
+# heading at top left of website
+nav_heading: Analytics Dashboard
