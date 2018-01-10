@@ -13,6 +13,28 @@ end
 # load website config file
 site_config = YAML.safe_load(read_file('site.yml'))
 
+# data for GitHub buttons
+buttons = [
+  ['', "Follow @#{site_config['github_username']} on GitHub", "Follow @#{site_config['github_username']}", ''],
+  ["/#{site_config['repository']}", "Star #{site_config['github_username']}/#{site_config['repository']} on GitHub", 'Star', 'star'],
+  ["/#{site_config['repository']}/subscription", "Watch #{site_config['github_username']}/#{site_config['repository']} on GitHub", 'Watch', 'eye'],
+  ["/#{site_config['repository']}/fork", "Fork #{site_config['github_username']}/#{site_config['repository']} on GitHub", 'Fork', 'repo-forked']
+]
+
+# function to make the list of GitHub buttons
+def add_github_buttons(arr)
+  s = ''
+  arr.map do |button|
+    s += %(
+          <li>
+            <a class="github-button" href="https://github.com/jbampton#{button[0]}")
+    s += %( data-icon="octicon-#{button[3]}" ) unless button[3] == ''
+    s += %( data-size="large" data-show-count="true" aria-label="#{button[1]}">#{button[2]}</a>
+          </li>)
+  end
+  s
+end
+
 # function
 def ii(i)
   i.positive? ? i : ''
@@ -174,13 +196,8 @@ $page = '
     </div>
     <footer>
       <div class="container">
-        <ul class="list-unstyled">
-          <li>
-            <a class="github-button" href="https://github.com/jbampton" data-size="large" data-show-count="true" aria-label="Follow @jbampton on GitHub">Follow @jbampton</a>
-          </li>
-          <li>
-            <a class="github-button" href="https://github.com/jbampton/dashboard-2" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star jbampton/dashboard-2 on GitHub">Star</a>
-          </li>'
+        <ul class="list-unstyled">'
+$page += add_github_buttons(buttons)
 # continue to build all the pages
 page_build(page_count)
 # restart common page region
@@ -206,7 +223,6 @@ $page = %(
     <script src="https://www.google.com/jsapi"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="bootstrap/js/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script>
       // Load the Visualization API and the corechart package.
