@@ -217,13 +217,15 @@ $page = %(
                alt="Flag Counter">
         </a>
       </div>
-    </footer>
-    <!--Load the AJAX API-->
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="https://www.google.com/jsapi"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="bootstrap/js/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    </footer>)
+# add all the websites external JavaScript files
+site_scripts = %w[https://www.gstatic.com/charts/loader.js https://www.google.com/jsapi bootstrap/js/jquery.min.js bootstrap/js/bootstrap.min.js]
+site_scripts.map do |script|
+  $page += %(
+    <script src="#{script}"></script>)
+end
+
+$page += %(
     <script>
       // Load the Visualization API and the corechart package.
       google.charts.load("current", {"packages":["corechart"]});\n)
