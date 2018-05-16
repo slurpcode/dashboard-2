@@ -1,6 +1,6 @@
 # Dashboard-2
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/jbampton/dashboard-2/blob/gh-pages/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/jbampton/dashboard-2/blob/gh-pages/LICENSE)
 
 http://thebeast.me/dashboard-2/
 
