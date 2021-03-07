@@ -208,7 +208,7 @@ page_build(page_count)
 $page = %(
             <li><a href="#head1">#{site_config['back_to_top']}</a></li>
             <li class="nuchecker">
-              <a target="_blank" rel="noopener">#{site_config['valid_html']}</a>
+              <a href="#" rel="noopener">#{site_config['valid_html']}</a>
             </li>
         </ul>
         <a href="http://s05.flagcounter.com/more/BHT"
@@ -253,7 +253,7 @@ $page = '
          if (tab === 0) {
            tab = "";
          }
-         $(".nuchecker a").attr("href", "https://validator.w3.org/nu/?doc=http%3A%2F%2Fthebeast.me%2Fdashboard-2%2Findex" + tab + ".html");
+         $(".nuchecker a").attr("href", "https://validator.w3.org/nu/?doc=http%3A%2F%2Fslurpcode.github.io%2Fdashboard-2%2Findex" + tab + ".html");
       });
     </script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
